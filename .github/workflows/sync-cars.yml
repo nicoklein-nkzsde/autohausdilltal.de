@@ -28,30 +28,31 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Zugangsdaten prüfen
-        id: check
+      - name: Quelle wählen
+        id: src
         env:
           MOBILE_API_USER: ${{ secrets.MOBILE_API_USER }}
         run: |
-          if [ -z "$MOBILE_API_USER" ]; then
-            echo "::warning::Secret MOBILE_API_USER ist nicht gesetzt – Sync wird übersprungen, index.html bleibt unverändert."
-            echo "ready=false" >> "$GITHUB_OUTPUT"
+          # Die offizielle Search-API liefert deutlich mehr Felder als die
+          # Händlerseite. Sobald die Zugangsdaten als Secrets hinterlegt sind,
+          # wird automatisch auf sie umgeschaltet.
+          if [ -n "$MOBILE_API_USER" ]; then
+            echo "source=api" >> "$GITHUB_OUTPUT"
           else
-            echo "ready=true" >> "$GITHUB_OUTPUT"
+            echo "source=live" >> "$GITHUB_OUTPUT"
           fi
 
       - name: Fahrzeuge abrufen und index.html aktualisieren
-        if: steps.check.outputs.ready == 'true'
         env:
           MOBILE_API_USER: ${{ secrets.MOBILE_API_USER }}
           MOBILE_API_PASS: ${{ secrets.MOBILE_API_PASS }}
           MOBILE_CUSTOMER_ID: ${{ secrets.MOBILE_CUSTOMER_ID }}
         run: |
-          python scripts/sync_cars.py --source api \
+          python scripts/sync_cars.py --source ${{ steps.src.outputs.source }} \
             ${{ inputs.dry_run && '--dry-run' || '' }}
 
       - name: Änderungen committen und pushen
-        if: steps.check.outputs.ready == 'true' && !inputs.dry_run
+        if: ${{ !inputs.dry_run }}
         run: |
           if [ -z "$(git status --porcelain index.html data/cars.json sitemap.xml)" ]; then
             echo "Keine Änderungen – nichts zu committen."
