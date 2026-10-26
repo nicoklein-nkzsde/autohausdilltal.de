@@ -1,0 +1,65 @@
+name: Fahrzeuge von mobile.de synchronisieren
+
+on:
+  schedule:
+    # alle 6 Stunden (UTC). GitHub verzögert Cron-Läufe je nach Auslastung um einige Minuten.
+    - cron: "0 */6 * * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Nur testen, nichts committen"
+        type: boolean
+        default: false
+
+concurrency:
+  group: sync-cars
+  cancel-in-progress: false
+
+permissions:
+  contents: write   # reicht zum Pushen – ein eigener PAT ist dafür NICHT nötig
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Zugangsdaten prüfen
+        id: check
+        env:
+          MOBILE_API_USER: ${{ secrets.MOBILE_API_USER }}
+        run: |
+          if [ -z "$MOBILE_API_USER" ]; then
+            echo "::warning::Secret MOBILE_API_USER ist nicht gesetzt – Sync wird übersprungen, index.html bleibt unverändert."
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Fahrzeuge abrufen und index.html aktualisieren
+        if: steps.check.outputs.ready == 'true'
+        env:
+          MOBILE_API_USER: ${{ secrets.MOBILE_API_USER }}
+          MOBILE_API_PASS: ${{ secrets.MOBILE_API_PASS }}
+          MOBILE_CUSTOMER_ID: ${{ secrets.MOBILE_CUSTOMER_ID }}
+        run: |
+          python scripts/sync_cars.py --source api \
+            ${{ inputs.dry_run && '--dry-run' || '' }}
+
+      - name: Änderungen committen und pushen
+        if: steps.check.outputs.ready == 'true' && !inputs.dry_run
+        run: |
+          if [ -z "$(git status --porcelain index.html data/cars.json sitemap.xml)" ]; then
+            echo "Keine Änderungen – nichts zu committen."
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html data/cars.json sitemap.xml
+          COUNT=$(python -c "import json,pathlib; print(json.loads(pathlib.Path('data/cars.json').read_text())['count'])")
+          git commit -m "Fahrzeuge von mobile.de synchronisiert (${COUNT} Fahrzeuge)"
+          git push
