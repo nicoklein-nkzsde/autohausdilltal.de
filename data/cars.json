@@ -1,7 +1,7 @@
 {
-  "syncedAt": "2026-10-26T20:29:19+00:00",
+  "syncedAt": "2026-10-27T14:29:27+00:00",
   "source": "live",
-  "count": 25,
+  "count": 26,
   "cars": [
     {
       "id": 1,
@@ -485,6 +485,38 @@
     },
     {
       "id": 16,
+      "make": "Volkswagen",
+      "model": "Passat Variant",
+      "name": "Volkswagen Passat Variant",
+      "variant": "KAMERA |AHK | ACC | NAVI | LED",
+      "type": "KOMBI",
+      "year": 2023,
+      "ez": "05/2023",
+      "km": 147000,
+      "ps": 150,
+      "kw": 110,
+      "fuel": "Benzin",
+      "gear": "",
+      "price": 16795,
+      "condition": "Gebraucht",
+      "unfallfrei": "Ja",
+      "hubraum": "",
+      "schadstoff": "",
+      "scheckheft": "",
+      "nichtraucher": "",
+      "vorbesitzer": 0,
+      "tueren": "",
+      "sitzplaetze": 0,
+      "aussenfarbe": "",
+      "innenfarbe": "",
+      "polsterung": "",
+      "imageUrl": "https://img.classistatic.de/api/v1/mo-prod/images/06/062404a4-a47a-4c3d-8b46-62132f9f2404?rule=mo-1600",
+      "link": "https://suchen.mobile.de/fahrzeuge/details.html?id=48983391481280",
+      "guarantee": false,
+      "adId": "48983391481280"
+    },
+    {
+      "id": 17,
       "make": "Opel",
       "model": "Insignia B",
       "name": "Opel Insignia B",
@@ -516,7 +548,7 @@
       "adId": "39554209523104"
     },
     {
-      "id": 17,
+      "id": 18,
       "make": "Mazda",
       "model": "MX-5",
       "name": "Mazda MX-5",
@@ -548,7 +580,7 @@
       "adId": "41705252633120"
     },
     {
-      "id": 18,
+      "id": 19,
       "make": "Opel",
       "model": "Astra",
       "name": "Opel Astra",
@@ -580,7 +612,7 @@
       "adId": "40643609060096"
     },
     {
-      "id": 19,
+      "id": 20,
       "make": "BMW",
       "model": "Touring 540",
       "name": "BMW Touring 540",
@@ -612,7 +644,7 @@
       "adId": "45900165211488"
     },
     {
-      "id": 20,
+      "id": 21,
       "make": "Volvo",
       "model": "C30",
       "name": "Volvo C30",
@@ -644,7 +676,7 @@
       "adId": "446689827"
     },
     {
-      "id": 21,
+      "id": 22,
       "make": "Renault",
       "model": "Kangoo Rapid",
       "name": "Renault Kangoo Rapid",
@@ -676,7 +708,7 @@
       "adId": "45916734975136"
     },
     {
-      "id": 22,
+      "id": 23,
       "make": "Opel",
       "model": "Corsa F",
       "name": "Opel Corsa F",
@@ -708,7 +740,7 @@
       "adId": "442030448"
     },
     {
-      "id": 23,
+      "id": 24,
       "make": "Fiat",
       "model": "500e 500",
       "name": "Fiat 500e 500",
@@ -740,7 +772,7 @@
       "adId": "52855145097216"
     },
     {
-      "id": 24,
+      "id": 25,
       "make": "Opel",
       "model": "Corsa F",
       "name": "Opel Corsa F",
@@ -772,7 +804,7 @@
       "adId": "442030080"
     },
     {
-      "id": 25,
+      "id": 26,
       "make": "Mercedes-Benz",
       "model": "GLE 350",
       "name": "Mercedes-Benz GLE 350",
