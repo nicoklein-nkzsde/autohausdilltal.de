@@ -1,42 +1,10 @@
 {
-  "syncedAt": "2026-10-28T14:29:40+00:00",
+  "syncedAt": "2026-10-28T20:29:44+00:00",
   "source": "live",
-  "count": 25,
+  "count": 24,
   "cars": [
     {
       "id": 1,
-      "make": "Volkswagen",
-      "model": "Golf VII",
-      "name": "Volkswagen Golf VII",
-      "variant": "Lim. Highline R-Line, Kamera|L-E-D",
-      "type": "LIMOUSINE",
-      "year": 2018,
-      "ez": "10/2018",
-      "km": 61000,
-      "ps": 150,
-      "kw": 110,
-      "fuel": "Benzin",
-      "gear": "",
-      "price": 17495,
-      "condition": "Gebraucht",
-      "unfallfrei": "Ja",
-      "hubraum": "",
-      "schadstoff": "",
-      "scheckheft": "",
-      "nichtraucher": "",
-      "vorbesitzer": 0,
-      "tueren": "",
-      "sitzplaetze": 0,
-      "aussenfarbe": "",
-      "innenfarbe": "",
-      "polsterung": "",
-      "imageUrl": "https://img.classistatic.de/api/v1/mo-prod/images/43/43a322dc-9d3d-41df-85fa-638570a0203e?rule=mo-1600",
-      "link": "https://suchen.mobile.de/fahrzeuge/details.html?id=51263585702720",
-      "guarantee": false,
-      "adId": "51263585702720"
-    },
-    {
-      "id": 2,
       "make": "Volkswagen",
       "model": "Tiguan",
       "name": "Volkswagen Tiguan",
@@ -68,7 +36,7 @@
       "adId": "48606635125568"
     },
     {
-      "id": 3,
+      "id": 2,
       "make": "Audi",
       "model": "RS5",
       "name": "Audi RS5",
@@ -100,7 +68,7 @@
       "adId": "51751027383200"
     },
     {
-      "id": 4,
+      "id": 3,
       "make": "Volkswagen",
       "model": "T-Roc",
       "name": "Volkswagen T-Roc",
@@ -132,7 +100,7 @@
       "adId": "458598088"
     },
     {
-      "id": 5,
+      "id": 4,
       "make": "Mercedes-Benz",
       "model": "E 250",
       "name": "Mercedes-Benz E 250",
@@ -164,7 +132,7 @@
       "adId": "45933036462912"
     },
     {
-      "id": 6,
+      "id": 5,
       "make": "Volkswagen",
       "model": "Caddy",
       "name": "Volkswagen Caddy",
@@ -196,7 +164,7 @@
       "adId": "53172804078624"
     },
     {
-      "id": 7,
+      "id": 6,
       "make": "Volkswagen",
       "model": "Tiguan",
       "name": "Volkswagen Tiguan",
@@ -228,7 +196,7 @@
       "adId": "41149779810464"
     },
     {
-      "id": 8,
+      "id": 7,
       "make": "BMW",
       "model": "118",
       "name": "BMW 118",
@@ -260,7 +228,7 @@
       "adId": "48424014094752"
     },
     {
-      "id": 9,
+      "id": 8,
       "make": "SEAT",
       "model": "Leon",
       "name": "SEAT Leon",
@@ -292,7 +260,7 @@
       "adId": "48066791015200"
     },
     {
-      "id": 10,
+      "id": 9,
       "make": "SEAT",
       "model": "Leon ST",
       "name": "SEAT Leon ST",
@@ -324,7 +292,7 @@
       "adId": "43474600739104"
     },
     {
-      "id": 11,
+      "id": 10,
       "make": "MINI",
       "model": "COOPER Countryman",
       "name": "MINI COOPER Countryman",
@@ -356,7 +324,7 @@
       "adId": "50912790822112"
     },
     {
-      "id": 12,
+      "id": 11,
       "make": "Opel",
       "model": "Corsa E",
       "name": "Opel Corsa E",
@@ -388,7 +356,7 @@
       "adId": "51608229238144"
     },
     {
-      "id": 13,
+      "id": 12,
       "make": "BMW",
       "model": "118",
       "name": "BMW 118",
@@ -420,7 +388,7 @@
       "adId": "51451479801536"
     },
     {
-      "id": 14,
+      "id": 13,
       "make": "Ford",
       "model": "Kuga",
       "name": "Ford Kuga",
@@ -452,7 +420,7 @@
       "adId": "438992720"
     },
     {
-      "id": 15,
+      "id": 14,
       "make": "Ford",
       "model": "Focus ST",
       "name": "Ford Focus ST",
@@ -484,7 +452,7 @@
       "adId": "52104382342336"
     },
     {
-      "id": 16,
+      "id": 15,
       "make": "BMW",
       "model": "530 d",
       "name": "BMW 530 d",
@@ -497,7 +465,7 @@
       "kw": 190,
       "fuel": "Diesel",
       "gear": "",
-      "price": 15900,
+      "price": 14900,
       "condition": "Gebraucht",
       "unfallfrei": "Ja",
       "hubraum": "",
@@ -516,7 +484,7 @@
       "adId": "43471383933152"
     },
     {
-      "id": 17,
+      "id": 16,
       "make": "Volkswagen",
       "model": "Passat Variant",
       "name": "Volkswagen Passat Variant",
@@ -548,7 +516,7 @@
       "adId": "48983391481280"
     },
     {
-      "id": 18,
+      "id": 17,
       "make": "Opel",
       "model": "Insignia B",
       "name": "Opel Insignia B",
@@ -580,7 +548,7 @@
       "adId": "39554209523104"
     },
     {
-      "id": 19,
+      "id": 18,
       "make": "Mazda",
       "model": "MX-5",
       "name": "Mazda MX-5",
@@ -612,7 +580,7 @@
       "adId": "41705252633120"
     },
     {
-      "id": 20,
+      "id": 19,
       "make": "Opel",
       "model": "Astra",
       "name": "Opel Astra",
@@ -644,7 +612,7 @@
       "adId": "40643609060096"
     },
     {
-      "id": 21,
+      "id": 20,
       "make": "BMW",
       "model": "Touring 540",
       "name": "BMW Touring 540",
@@ -676,7 +644,7 @@
       "adId": "45900165211488"
     },
     {
-      "id": 22,
+      "id": 21,
       "make": "Volvo",
       "model": "C30",
       "name": "Volvo C30",
@@ -708,7 +676,7 @@
       "adId": "446689827"
     },
     {
-      "id": 23,
+      "id": 22,
       "make": "Renault",
       "model": "Kangoo Rapid",
       "name": "Renault Kangoo Rapid",
@@ -740,7 +708,7 @@
       "adId": "45916734975136"
     },
     {
-      "id": 24,
+      "id": 23,
       "make": "Opel",
       "model": "Corsa F",
       "name": "Opel Corsa F",
@@ -772,7 +740,7 @@
       "adId": "442030080"
     },
     {
-      "id": 25,
+      "id": 24,
       "make": "Mercedes-Benz",
       "model": "GLE 350",
       "name": "Mercedes-Benz GLE 350",
