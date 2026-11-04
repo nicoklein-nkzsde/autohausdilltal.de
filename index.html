@@ -2151,8 +2151,16 @@ function bewerbung(){
 // ausschliesslich nach einer bestaetigten Antwort des Servers. Schlaegt der
 // Versand fehl, bleibt alles Eingetippte stehen und der Kunde bekommt einen
 // Weg angeboten, der ohne fremden Dienst funktioniert.
-const FORM_ENDPOINT='https://formsubmit.co/ajax/autohausdilltal@web.de';
+// Versandkette. Erste Wahl ist der eigene Relay (Google Apps Script im Konto
+// des Autohauses): kein fremder Dienst, der ausfallen kann, und jede Anfrage
+// landet zusaetzlich in einer Google-Tabelle. FormSubmit steht nur noch als
+// zweiter Versuch dahinter - der Dienst war am 04.11.2026 stundenlang komplett
+// aus (HTTP 522), genau waehrend ein Kunde das Formular getestet hat.
+const RELAY_URL='';   // <-- hier die /exec-URL aus Apps Script eintragen
+const FORM_FALLBACK='https://formsubmit.co/ajax/autohausdilltal@web.de';
+const MAIL_ZIEL='autohausdilltal@web.de';
 const WA_NUMMER='4915168410570';
+const MAX_UPLOAD=8*1024*1024;   // Apps Script nimmt groessere Pakete nicht an
 
 function formDatenLesen(f){
   const raus=[];
@@ -2190,59 +2198,110 @@ function zeigeBanner(text,typ,extra){
   return el;
 }
 
+function dateiLesen(datei){
+  return new Promise((ok,nein)=>{
+    const leser=new FileReader();
+    leser.onload=()=>ok({name:datei.name,type:datei.type||'application/octet-stream',
+                         data:String(leser.result).split(',')[1]});
+    leser.onerror=()=>nein(leser.error);
+    leser.readAsDataURL(datei);
+  });
+}
+
+async function anhaengeSammeln(f){
+  const alle=[];
+  f.querySelectorAll('input[type=file]').forEach(el=>{for(const d of el.files)alle.push(d);});
+  const fertig=[];let summe=0;
+  for(const d of alle){
+    if(summe+d.size>MAX_UPLOAD)break;
+    summe+=d.size;
+    try{fertig.push(await dateiLesen(d));}catch(e){}
+  }
+  return {anhaenge:fertig,gesamt:alle.length};
+}
+
+// Beide Versuche melden nur dann Erfolg, wenn der Server das ausdruecklich
+// bestaetigt. Alles andere fliegt als Fehler raus.
+async function versuchRelay(nutzlast){
+  const a=new AbortController();const t=setTimeout(()=>a.abort(),25000);
+  try{
+    // text/plain vermeidet den CORS-Preflight, den Apps Script nicht beantwortet
+    const res=await fetch(RELAY_URL,{method:'POST',signal:a.signal,
+      headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(nutzlast)});
+    const txt=await res.text();
+    if(!res.ok)throw new Error('Relay HTTP '+res.status);
+    const j=JSON.parse(txt);
+    if(!j.ok)throw new Error(j.fehler||'Relay meldet Fehler');
+  }finally{clearTimeout(t);}
+}
+
+async function versuchFormsubmit(f,fotos){
+  const daten=new FormData(f);
+  if(fotos)daten.append('Hinweis Fotos',fotos+' Foto(s) werden separat nachgereicht');
+  daten.delete('_next');daten.delete('_template');
+  const a=new AbortController();const t=setTimeout(()=>a.abort(),10000);
+  try{
+    const res=await fetch(FORM_FALLBACK,{method:'POST',body:daten,
+      headers:{'Accept':'application/json'},signal:a.signal});
+    const txt=await res.text();
+    if(!res.ok)throw new Error('FormSubmit HTTP '+res.status);
+    let ok=true;try{ok=JSON.parse(txt).success!==false;}catch(e){}
+    if(!ok)throw new Error('FormSubmit lehnt ab');
+  }finally{clearTimeout(t);}
+}
+
 async function sendeFormular(ev,art){
   ev.preventDefault();
   const f=ev.target;
   if(!f.reportValidity())return false;
+  const koeder=f.querySelector('input[name=_honey]');
+  if(koeder&&koeder.value)return false;
 
   const btn=f.querySelector('button[type=submit]');
   const alt=btn?btn.innerHTML:'';
-  if(btn){btn.disabled=true;btn.innerHTML='Wird gesendet …';}
+  if(btn){btn.disabled=true;btn.innerHTML='Wird gesendet \u2026';}
 
-  // Eingaben sichern, falls der Versand scheitert oder die Seite neu lädt
-  try{localStorage.setItem('formEntwurf_'+art,JSON.stringify(formDatenLesen(f)));}catch(e){}
+  const felder=formDatenLesen(f);
+  // Eingaben sichern, falls der Versand scheitert oder die Seite neu laedt
+  try{localStorage.setItem('formEntwurf_'+art,JSON.stringify(felder));}catch(e){}
 
-  const daten=new FormData(f);
-  const fotos=[...f.querySelectorAll('input[type=file]')].reduce((n,el)=>n+el.files.length,0);
-  if(fotos)daten.append('Hinweis Fotos',`${fotos} Foto(s) werden separat per WhatsApp nachgereicht`);
-  daten.delete('_next');daten.delete('_template');
-
-  const abbruch=new AbortController();
-  const frist=setTimeout(()=>abbruch.abort(),20000);
+  let gesendet=false,fehler=null,fotos=0;
   try{
-    const res=await fetch(FORM_ENDPOINT,{method:'POST',body:daten,
-      headers:{'Accept':'application/json'},signal:abbruch.signal});
-    clearTimeout(frist);
-    const txt=await res.text();
-    if(!res.ok)throw new Error('HTTP '+res.status+' '+txt.slice(0,120));
-    let ok=true;
-    try{ok=JSON.parse(txt).success!==false;}catch(e){}
-    if(!ok)throw new Error(txt.slice(0,160));
+    const sammlung=await anhaengeSammeln(f);
+    fotos=sammlung.gesamt;
+    if(RELAY_URL){
+      try{
+        await versuchRelay({art:art,felder:felder,anhaenge:sammlung.anhaenge,
+                            fotosGesamt:fotos,honey:koeder?koeder.value:''});
+        gesendet=true;
+      }catch(e){fehler=e;console.error('Relay fehlgeschlagen:',e);}
+    }
+    if(!gesendet){
+      try{await versuchFormsubmit(f,fotos);gesendet=true;}
+      catch(e){fehler=fehler||e;console.error('FormSubmit fehlgeschlagen:',e);}
+    }
+  }catch(e){fehler=e;}
 
+  if(gesendet){
     try{localStorage.removeItem('formEntwurf_'+art);}catch(e){}
     f.reset();
-    const meld={ankauf:'Ihr Angebot ist bei uns eingegangen. Wir melden uns schnellstmöglich bei Ihnen.',
-                termin:'Ihre Terminanfrage ist eingegangen. Wir bestätigen den Termin in Kürze.',
-                kontakt:'Ihre Nachricht ist eingegangen. Wir melden uns schnellstmöglich bei Ihnen.'}[art];
-    zeigeBanner(meld,'ok',fotos
-      ?`<a class="sent-banner-cta" target="_blank" rel="noopener" href="https://wa.me/${WA_NUMMER}?text=${encodeURIComponent('Hallo, ich habe gerade ein Ankaufangebot über Ihre Website gesendet. Hier die Fotos zum Fahrzeug:')}">Jetzt die ${fotos} Foto${fotos>1?'s':''} per WhatsApp senden</a>`
-      :'');
-  }catch(err){
-    clearTimeout(frist);
-    // Niemals Erfolg melden, wenn keiner da ist. Der Kunde bekommt einen Weg,
-    // der ohne den ausgefallenen Dienst funktioniert, und behält seine Eingaben.
-    console.error('Formularversand fehlgeschlagen:',err);
+    const meld={ankauf:'Ihr Angebot ist bei uns eingegangen. Wir melden uns schnellstm\u00f6glich bei Ihnen.',
+                termin:'Ihre Terminanfrage ist eingegangen. Wir best\u00e4tigen den Termin in K\u00fcrze.',
+                kontakt:'Ihre Nachricht ist eingegangen. Wir melden uns schnellstm\u00f6glich bei Ihnen.'}[art];
+    zeigeBanner(meld,'ok','');
+  }else{
+    // Niemals Erfolg melden, wenn keiner da ist. Der Kunde behaelt seine
+    // Eingaben und bekommt einen Weg, der ohne fremden Dienst funktioniert.
     zeigeBanner(
-      'Das Absenden hat nicht geklappt – unser Formulardienst antwortet gerade nicht. '
-      +'Ihre Eingaben stehen noch da. Bitte schicken Sie uns die Anfrage direkt:','fehler',
+      'Das Absenden hat nicht geklappt \u2013 Ihre Eingaben stehen noch da. '
+      +'Bitte schicken Sie uns die Anfrage direkt, es dauert nur einen Klick:','fehler',
       `<div class="sent-banner-aktionen">
          <a class="sent-banner-cta" target="_blank" rel="noopener" href="https://wa.me/${WA_NUMMER}?text=${encodeURIComponent(waText(f,art))}">Per WhatsApp senden</a>
          <a class="sent-banner-cta sent-banner-cta--rand" href="tel:+${WA_NUMMER}">0151 68410570 anrufen</a>
-         <a class="sent-banner-cta sent-banner-cta--rand" href="mailto:autohausdilltal@web.de?subject=${encodeURIComponent('Anfrage über autohausdilltal.de ('+art+')')}&body=${encodeURIComponent(waText(f,art))}">Per E-Mail senden</a>
+         <a class="sent-banner-cta sent-banner-cta--rand" href="mailto:${MAIL_ZIEL}?subject=${encodeURIComponent('Anfrage \u00fcber autohausdilltal.de ('+art+')')}&body=${encodeURIComponent(waText(f,art))}">Per E-Mail senden</a>
        </div>`);
-  }finally{
-    if(btn){btn.disabled=false;btn.innerHTML=alt;}
   }
+  if(btn){btn.disabled=false;btn.innerHTML=alt;}
   return false;
 }
 
