@@ -60,7 +60,63 @@
      eine Verbindung zu einem fremden Server weniger macht die Seite schneller. -->
 <link rel="preload" href="fonts/inter-400-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/inter-700-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/archivo-700-latin.woff2" as="font" type="font/woff2" crossorigin>
 <style>
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(fonts/archivo-600-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(fonts/archivo-600-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(fonts/archivo-700-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(fonts/archivo-700-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 800;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(fonts/archivo-800-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 800;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(fonts/archivo-800-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 @font-face {
   font-family: 'Inter';
   font-style: normal;
@@ -146,23 +202,32 @@
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 :root{
-  --blue:#2563EB;--blue-hover:#1D4ED8;--blue-light:#EFF6FF;--blue-mid:#DBEAFE;
-  --dark:#111827;--dark-2:#1F2937;--grey-1:#6B7280;--grey-2:#9CA3AF;--grey-3:#D1D5DB;
-  --grey-4:#F3F4F6;--grey-5:#F9FAFB;--white:#FFFFFF;
-  --green:#22C55E;--green-hover:#16A34A;
-  --radius:12px;--radius-sm:8px;--radius-lg:16px;
-  --shadow:0 1px 3px rgba(0,0,0,0.1),0 1px 2px rgba(0,0,0,0.06);
-  --shadow-md:0 4px 6px -1px rgba(0,0,0,0.1),0 2px 4px -1px rgba(0,0,0,0.06);
-  --shadow-lg:0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
-  --shadow-xl:0 20px 25px -5px rgba(0,0,0,0.1),0 10px 10px -5px rgba(0,0,0,0.04);
+  /* Bewusst nicht die Tailwind-Defaults: Das Standardblau #2563EB, die kühlen
+     Grautöne und Inter sind die Kombination, an der man generierte Seiten
+     erkennt. Stattdessen ein tiefes Petrolblau als Markenfarbe, ein warmes
+     Kupfer für Handlungsaufforderungen und papierwarme Neutraltöne. */
+  --blue:#14425A; --blue-hover:#0E3346; --blue-light:#EDF3F6; --blue-mid:#D5E3EA;
+  --accent:#A8501A; --accent-hover:#8C4215;
+  --dark:#15202B; --dark-2:#22303C;
+  --grey-1:#6E6A64; --grey-2:#95908A; --grey-3:#DBD5CC;
+  --grey-4:#F2EFEA; --grey-5:#FBFAF8;
+  --white:#FFFFFF;
+  --green:#2F7D52; --green-hover:#276744;
+  --radius:10px; --radius-sm:6px; --radius-lg:12px;
+  /* Flachere Schatten: die gestapelten Tailwind-Schatten auf jeder Karte
+     erzeugen diesen weichgespülten Baukasten-Eindruck. */
+  --shadow:0 1px 2px rgba(21,32,43,0.06);
+  --shadow-md:0 2px 6px rgba(21,32,43,0.07);
+  --shadow-lg:0 6px 18px rgba(21,32,43,0.08);
+  --shadow-xl:0 14px 36px rgba(21,32,43,0.10);
 }
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;touch-action:pan-y;}
-body{font-family:'Inter',sans-serif;color:var(--dark);background:var(--white);line-height:1.6;overflow-x:hidden;overflow-y:auto;position:relative;width:100%;max-width:100vw;-webkit-overflow-scrolling:touch;touch-action:pan-y;}
+body{font-family:'Inter',system-ui,sans-serif;color:var(--dark);background:var(--white);line-height:1.6;overflow-x:hidden;overflow-y:auto;position:relative;width:100%;max-width:100vw;-webkit-overflow-scrolling:touch;touch-action:pan-y;}
 *{-webkit-tap-highlight-color:transparent;}
 a{text-decoration:none;color:inherit;}
-button{cursor:pointer;font-family:'Inter',sans-serif;}
+button{cursor:pointer;font-family:'Inter',system-ui,sans-serif;}
 img{max-width:100%;display:block;}
-input,select,textarea{font-family:'Inter',sans-serif;}
+input,select,textarea{font-family:'Inter',system-ui,sans-serif;}
 ::-webkit-scrollbar{width:6px;}
 a,button{transition:all 0.2s ease;}
 .nav-link,.nav-cta,.btn-blue,.btn-outline,.btn-submit,.btn-whatsapp,.btn-anruf,.btn-email{
@@ -186,7 +251,7 @@ a,button{transition:all 0.2s ease;}
   position:fixed;top:12px;left:50%;transform:translateX(-50%);
   width:calc(100% - 24px);max-width:1280px;
   background:rgba(255,255,255,0.95);backdrop-filter:blur(20px);
-  border:1px solid rgba(0,0,0,0.08);border-radius:100px;
+  border:1px solid rgba(0,0,0,0.08);border-radius:6px;
   padding:12px 20px 12px 16px;
   display:flex;align-items:center;justify-content:space-between;
   z-index:1000;box-shadow:0 4px 24px rgba(0,0,0,0.08);
@@ -197,7 +262,7 @@ a,button{transition:all 0.2s ease;}
 .nav-logo-icon svg{width:22px;height:22px;}
 .nav-logo-text{font-size:0.88rem;font-weight:700;color:var(--dark);}
 .nav-links{display:flex;align-items:center;gap:4px;}
-.nav-link{padding:8px 14px;border-radius:100px;font-size:0.85rem;font-weight:500;color:var(--grey-1);transition:all 0.2s;cursor:pointer;border:none;background:none;position:relative;}
+.nav-link{padding:8px 14px;border-radius:6px;font-size:0.85rem;font-weight:500;color:var(--grey-1);transition:all 0.2s;cursor:pointer;border:none;background:none;position:relative;}
 .nav-link:hover{color:var(--dark);background:var(--grey-4);}
 .nav-link.active{color:var(--dark);}
 .nav-link-dropdown{display:flex;align-items:center;gap:4px;}
@@ -216,7 +281,7 @@ a,button{transition:all 0.2s ease;}
 .dropdown-item-icon svg{width:18px;height:18px;}
 .dropdown-item-title{font-size:0.85rem;font-weight:600;color:var(--dark);margin-bottom:2px;}
 .dropdown-item-desc{font-size:0.78rem;color:var(--grey-1);line-height:1.4;}
-.nav-cta{padding:10px 20px;background:var(--blue);color:white;border:none;border-radius:100px;font-size:0.85rem;font-weight:600;transition:all 0.2s;cursor:pointer;}
+.nav-cta{padding:10px 20px;background:var(--blue);color:white;border:none;border-radius:6px;font-size:0.85rem;font-weight:600;transition:all 0.2s;cursor:pointer;}
 .nav-cta:hover{background:var(--blue-hover);transform:translateY(-1px);box-shadow:0 4px 12px rgba(37,99,235,0.4);}
 .burger{display:none;flex-direction:column;gap:4px;cursor:pointer;padding:8px;border:none;background:none;}
 .burger span{display:block;width:20px;height:2px;background:var(--dark);border-radius:2px;transition:all 0.3s;}
@@ -246,7 +311,7 @@ a,button{transition:all 0.2s ease;}
 }
 .hero-pill{
   display:inline-flex;align-items:center;gap:8px;
-  background:white;border:1px solid var(--grey-3);border-radius:100px;
+  background:white;border:1px solid var(--grey-3);border-radius:6px;
   padding:6px 14px;font-size:0.8rem;font-weight:500;color:var(--grey-1);
   margin-bottom:24px;width:fit-content;box-shadow:var(--shadow);
 }
@@ -255,10 +320,10 @@ a,button{transition:all 0.2s ease;}
 .hero-title{font-size:clamp(2.8rem,5vw,4.2rem);font-weight:800;line-height:1.05;letter-spacing:-0.03em;color:var(--dark);margin-bottom:24px;}
 .hero-desc{font-size:1.05rem;color:var(--grey-1);line-height:1.7;max-width:480px;margin-bottom:40px;}
 .hero-buttons{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:48px;}
-.btn-blue{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;background:var(--blue);color:white;border:none;border-radius:100px;font-size:0.9rem;font-weight:600;cursor:pointer;transition:all 0.2s;}
+.btn-blue{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;background:var(--blue);color:white;border:none;border-radius:6px;font-size:0.9rem;font-weight:600;cursor:pointer;transition:all 0.2s;}
 .btn-blue:hover{background:var(--blue-hover);transform:translateY(-2px);box-shadow:0 8px 24px rgba(37,99,235,0.4);}
 .btn-blue svg{width:16px;height:16px;}
-.btn-outline{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;background:white;color:var(--dark);border:1.5px solid var(--grey-3);border-radius:100px;font-size:0.9rem;font-weight:600;cursor:pointer;transition:all 0.2s;}
+.btn-outline{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;background:white;color:var(--dark);border:1.5px solid var(--grey-3);border-radius:6px;font-size:0.9rem;font-weight:600;cursor:pointer;transition:all 0.2s;}
 .btn-outline:hover{border-color:var(--blue);color:var(--blue);transform:translateY(-2px);}
 .btn-outline svg{width:16px;height:16px;}
 .hero-stats{display:flex;gap:32px;flex-wrap:wrap;}
@@ -314,7 +379,7 @@ a,button{transition:all 0.2s ease;}
 .car-card-price{
   position:absolute;top:14px;right:14px;
   background:rgba(17,24,39,0.88);backdrop-filter:blur(8px);
-  color:white;padding:6px 14px;border-radius:100px;
+  color:white;padding:6px 14px;border-radius:6px;
   font-size:0.88rem;font-weight:700;letter-spacing:0.01em;
 }
 .car-card-guarantee{
@@ -659,7 +724,7 @@ footer{background:var(--dark-2);color:rgba(255,255,255,0.6);padding:48px 80px;di
       <h1 class="hero-title">Autohaus Dilltal</h1>
       <p class="hero-desc">Gebrauchtwagen An- & Verkauf in Eschenburg – mit bis zu 5 Jahren Garantie, flexibler Finanzierung und persönlicher Beratung in vier Sprachen. Wir freuen uns auf Ihren Besuch.</p>
       <div class="hero-buttons">
-        <button class="btn-blue" onclick="showPage('fahrzeuge')">
+        <button class="btn-blue hero-btn-primary" onclick="showPage('fahrzeuge')">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
           Fahrzeuge ansehen
         </button>
@@ -715,15 +780,15 @@ footer{background:var(--dark-2);color:rgba(255,255,255,0.6);padding:48px 80px;di
   </section>
 
   <!-- FINANZIERUNG & GARANTIE HIGHLIGHT -->
-  <section style="padding:80px 80px;background:linear-gradient(135deg,#1E3A8A 0%,#1D4ED8 50%,#2563EB 100%);">
+  <section style="padding:80px 80px;background:linear-gradient(135deg,#0E3346 0%,#14425A 55%,#1B5570 100%);">
     <div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;">
       <div>
-        <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.15);padding:6px 16px;border-radius:100px;font-size:0.72rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.9);margin-bottom:20px;">⭐ Unser Versprechen</div>
+        <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.15);padding:6px 16px;border-radius:6px;font-size:0.72rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.9);margin-bottom:20px;"> Unser Versprechen</div>
         <h2 style="font-family:Inter,sans-serif;font-size:clamp(1.8rem,3vw,2.6rem);font-weight:800;color:white;line-height:1.1;letter-spacing:-0.03em;margin-bottom:20px;">Finanzierung ab<br><span style="font-size:1.2em;">49 € mtl.</span> + bis zu<br>5 Jahre Garantie</h2>
         <p style="color:rgba(255,255,255,0.75);font-size:0.95rem;line-height:1.7;margin-bottom:32px;">Wir bieten Ihnen flexible Finanzierungslösungen für jedes Budget – direkt vor Ort, schnelle Entscheidung, keine versteckten Kosten. Und mit unserem Garantiepaket sind Sie bis zu 5 Jahre abgesichert.</p>
         <div style="display:flex;gap:12px;flex-wrap:wrap;">
-          <button onclick="showPage('leistungen')" style="padding:14px 28px;background:white;color:#1D4ED8;border:none;border-radius:100px;font-weight:700;font-size:0.9rem;cursor:pointer;transition:all 0.2s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform=''">Mehr erfahren</button>
-          <button onclick="showPage('termin')" style="padding:14px 28px;background:rgba(255,255,255,0.15);color:white;border:2px solid rgba(255,255,255,0.4);border-radius:100px;font-weight:600;font-size:0.9rem;cursor:pointer;transition:all 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.25)'" onmouseout="this.style.background='rgba(255,255,255,0.15)'">Termin vereinbaren</button>
+          <button onclick="showPage('leistungen')" style="padding:14px 28px;background:white;color:var(--blue-hover);border:none;border-radius:6px;font-weight:700;font-size:0.9rem;cursor:pointer;transition:all 0.2s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform=''">Mehr erfahren</button>
+          <button onclick="showPage('termin')" style="padding:14px 28px;background:rgba(255,255,255,0.15);color:white;border:2px solid rgba(255,255,255,0.4);border-radius:6px;font-weight:600;font-size:0.9rem;cursor:pointer;transition:all 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.25)'" onmouseout="this.style.background='rgba(255,255,255,0.15)'">Termin vereinbaren</button>
         </div>
       </div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
@@ -761,7 +826,7 @@ footer{background:var(--dark-2);color:rgba(255,255,255,0.6);padding:48px 80px;di
       </div>
       <div style="display:flex;gap:12px;flex-wrap:wrap;">
         <button onclick="showPage('termin')" class="btn-blue" style="white-space:nowrap;">Jetzt Termin buchen →</button>
-        <a href="https://wa.me/4915168410570?text=Hallo%2C%20ich%20möchte%20eine%20Probefahrt%20buchen." target="_blank" style="display:inline-flex;align-items:center;gap:8px;padding:14px 24px;background:#22C55E;color:white;border-radius:100px;font-weight:600;font-size:0.9rem;text-decoration:none;white-space:nowrap;">
+        <a href="https://wa.me/4915168410570?text=Hallo%2C%20ich%20möchte%20eine%20Probefahrt%20buchen." target="_blank" style="display:inline-flex;align-items:center;gap:8px;padding:14px 24px;background:#22C55E;color:white;border-radius:6px;font-weight:600;font-size:0.9rem;text-decoration:none;white-space:nowrap;">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
           WhatsApp
         </a>
@@ -773,17 +838,17 @@ footer{background:var(--dark-2);color:rgba(255,255,255,0.6);padding:48px 80px;di
   <section style="padding:80px 80px;background:white;">
     <div style="max-width:1200px;margin:0 auto;">
       <div style="text-align:center;margin-bottom:48px;">
-        <div class="section-eyebrow" style="justify-content:center;">⭐ Google Bewertungen</div>
+        <div class="section-eyebrow" style="justify-content:center;"> Google Bewertungen</div>
         <h2 class="section-title">Was unsere Kunden sagen</h2>
         <div style="display:flex;align-items:center;justify-content:center;gap:16px;margin-top:16px;flex-wrap:wrap;">
           <div style="display:flex;align-items:center;gap:6px;">
-            <span style="font-size:2rem;font-weight:800;color:#111827;letter-spacing:-0.04em;">4,7</span>
+            <span style="font-size:2rem;font-weight:800;color:var(--dark);letter-spacing:-0.04em;">4,7</span>
             <div>
               <div style="color:#FBBF24;font-size:1.1rem;letter-spacing:2px;">★★★★★</div>
               <div style="font-size:0.75rem;color:var(--grey-1);">17 Google Bewertungen</div>
             </div>
           </div>
-          <a href="https://www.google.com/maps/search/Autohaus+Dilltal+Eschenburg" target="_blank" style="display:inline-flex;align-items:center;gap:6px;padding:10px 20px;background:white;border:1.5px solid var(--grey-3);border-radius:100px;font-size:0.82rem;font-weight:600;color:var(--dark);text-decoration:none;transition:all 0.2s;" onmouseover="this.style.borderColor='#2563EB';this.style.color='#2563EB'" onmouseout="this.style.borderColor='#D1D5DB';this.style.color='#111827'">
+          <a href="https://www.google.com/maps/search/Autohaus+Dilltal+Eschenburg" target="_blank" style="display:inline-flex;align-items:center;gap:6px;padding:10px 20px;background:white;border:1.5px solid var(--grey-3);border-radius:6px;font-size:0.82rem;font-weight:600;color:var(--dark);text-decoration:none;transition:all 0.2s;" onmouseover="this.style.borderColor='#14425A';this.style.color='#14425A'" onmouseout="this.style.borderColor='#DBD5CC';this.style.color='#15202B'">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
             Auf Google bewerten
           </a>
@@ -1024,7 +1089,7 @@ footer{background:var(--dark-2);color:rgba(255,255,255,0.6);padding:48px 80px;di
           <button class="btn-anruf" onclick="window.location.href='tel:+4915168410570'"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.7h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l.76-.76a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Anrufen</button>
           <button class="btn-email" onclick="window.location.href='mailto:autohausdilltal@web.de'"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>E-Mail senden</button>
           <div style="margin-top:16px;padding-top:16px;border-top:1px solid var(--grey-3);">
-            <a id="sidebarMobileLink" href="https://home.mobile.de/TDAUTOMOBILE" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;gap:8px;padding:11px;border:1.5px solid var(--grey-3);border-radius:var(--radius-sm);font-size:0.82rem;font-weight:600;color:var(--grey-1);text-decoration:none;transition:all 0.2s;" onmouseover="this.style.borderColor='#2563EB';this.style.color='#2563EB'" onmouseout="this.style.borderColor='#D1D5DB';this.style.color='#6B7280'">
+            <a id="sidebarMobileLink" href="https://home.mobile.de/TDAUTOMOBILE" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;gap:8px;padding:11px;border:1.5px solid var(--grey-3);border-radius:var(--radius-sm);font-size:0.82rem;font-weight:600;color:var(--grey-1);text-decoration:none;transition:all 0.2s;" onmouseover="this.style.borderColor='#14425A';this.style.color='#14425A'" onmouseout="this.style.borderColor='#DBD5CC';this.style.color='#6E6A64'">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
               Auf mobile.de ansehen
             </a>
@@ -1608,14 +1673,14 @@ footer{background:var(--dark-2);color:rgba(255,255,255,0.6);padding:48px 80px;di
   </div>
   <div style="background:#ECE5DD;padding:20px;min-height:120px;">
     <div style="background:white;border-radius:0 12px 12px 12px;padding:12px 16px;max-width:85%;box-shadow:0 1px 2px rgba(0,0,0,0.1);">
-      <div style="font-size:0.88rem;color:#111827;line-height:1.5;">👋 Hallo! Ich bin Tamo von Autohaus Dilltal.</div>
-      <div style="font-size:0.88rem;color:#111827;line-height:1.5;margin-top:6px;">Womit kann ich Ihnen helfen?</div>
-      <div style="font-size:0.7rem;color:#9CA3AF;margin-top:6px;text-align:right;">Tamo · jetzt</div>
+      <div style="font-size:0.88rem;color:var(--dark);line-height:1.5;">👋 Hallo! Ich bin Tamo von Autohaus Dilltal.</div>
+      <div style="font-size:0.88rem;color:var(--dark);line-height:1.5;margin-top:6px;">Womit kann ich Ihnen helfen?</div>
+      <div style="font-size:0.7rem;color:var(--grey-2);margin-top:6px;text-align:right;">Tamo · jetzt</div>
     </div>
     <div style="display:flex;flex-direction:column;gap:8px;margin-top:16px;">
-      <a href="https://wa.me/4915168410570?text=Hallo%2C%20ich%20interessiere%20mich%20für%20ein%20Fahrzeug." target="_blank" style="display:block;background:#25D366;color:white;text-align:center;padding:11px;border-radius:8px;font-weight:600;font-size:0.85rem;text-decoration:none;">🚗 Fahrzeug anfragen</a>
-      <a href="https://wa.me/4915168410570?text=Hallo%2C%20ich%20möchte%20eine%20Probefahrt%20vereinbaren." target="_blank" style="display:block;background:#25D366;color:white;text-align:center;padding:11px;border-radius:8px;font-weight:600;font-size:0.85rem;text-decoration:none;">📅 Probefahrt buchen</a>
-      <a href="https://wa.me/4915168410570?text=Hallo%2C%20ich%20möchte%20mein%20Fahrzeug%20verkaufen%2Fin%20Zahlung%20geben." target="_blank" style="display:block;background:#25D366;color:white;text-align:center;padding:11px;border-radius:8px;font-weight:600;font-size:0.85rem;text-decoration:none;">💰 Fahrzeug abgeben</a>
+      <a href="https://wa.me/4915168410570?text=Hallo%2C%20ich%20interessiere%20mich%20für%20ein%20Fahrzeug." target="_blank" style="display:block;background:#25D366;color:white;text-align:center;padding:11px;border-radius:8px;font-weight:600;font-size:0.85rem;text-decoration:none;">Fahrzeug anfragen</a>
+      <a href="https://wa.me/4915168410570?text=Hallo%2C%20ich%20möchte%20eine%20Probefahrt%20vereinbaren." target="_blank" style="display:block;background:#25D366;color:white;text-align:center;padding:11px;border-radius:8px;font-weight:600;font-size:0.85rem;text-decoration:none;">Probefahrt buchen</a>
+      <a href="https://wa.me/4915168410570?text=Hallo%2C%20ich%20möchte%20mein%20Fahrzeug%20verkaufen%2Fin%20Zahlung%20geben." target="_blank" style="display:block;background:#25D366;color:white;text-align:center;padding:11px;border-radius:8px;font-weight:600;font-size:0.85rem;text-decoration:none;">Fahrzeug abgeben</a>
     </div>
   </div>
 </div>
@@ -1640,17 +1705,17 @@ footer{background:var(--dark-2);color:rgba(255,255,255,0.6);padding:48px 80px;di
 .team-photo-placeholder svg{width:52px;height:52px;}
 .team-photo-placeholder span{font-size:0.75rem;font-weight:500;}
 .team-body{padding:20px;}
-.team-role-badge{display:inline-block;padding:3px 10px;background:var(--blue-light);color:var(--blue);border-radius:100px;font-size:0.7rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:10px;}
+.team-role-badge{display:inline-block;padding:3px 10px;background:var(--blue-light);color:var(--blue);border-radius:6px;font-size:0.7rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:10px;}
 .team-name{font-size:1rem;font-weight:700;color:var(--dark);margin-bottom:4px;}
 .team-desc{font-size:0.82rem;color:var(--grey-1);line-height:1.55;}
 .team-langs{display:flex;gap:6px;margin-top:12px;flex-wrap:wrap;}
-.team-lang{padding:2px 8px;background:var(--grey-4);border-radius:100px;font-size:0.68rem;font-weight:600;color:var(--grey-1);}
+.team-lang{padding:2px 8px;background:var(--grey-4);border-radius:6px;font-size:0.68rem;font-weight:600;color:var(--grey-1);}
 .open-slot-body{padding:32px 20px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:12px;}
 .open-slot-icon{width:52px;height:52px;border-radius:50%;background:var(--grey-4);display:flex;align-items:center;justify-content:center;color:var(--grey-2);}
 .open-slot-icon svg{width:26px;height:26px;}
 .open-slot-title{font-size:0.9rem;font-weight:700;color:var(--dark);}
 .open-slot-desc{font-size:0.78rem;color:var(--grey-1);}
-.open-slot-cta{margin-top:4px;padding:8px 18px;background:var(--blue);color:white;border:none;border-radius:100px;font-size:0.78rem;font-weight:600;cursor:pointer;transition:all 0.2s;}
+.open-slot-cta{margin-top:4px;padding:8px 18px;background:var(--blue);color:white;border:none;border-radius:6px;font-size:0.78rem;font-weight:600;cursor:pointer;transition:all 0.2s;}
 .open-slot-cta:hover{background:var(--blue-hover);}
 @media(max-width:1024px){.team-grid{grid-template-columns:repeat(2,1fr);}}
 @media(max-width:560px){.team-grid{grid-template-columns:1fr;}}
@@ -1663,9 +1728,42 @@ footer{background:var(--dark-2);color:rgba(255,255,255,0.6);padding:48px 80px;di
 .sent-banner-text{display:flex;flex-direction:column;gap:10px;}
 .sent-banner--fehler{background:#7F1D1D;align-items:flex-start;}
 .sent-banner-aktionen{display:flex;gap:8px;flex-wrap:wrap;}
-.sent-banner-cta{display:inline-block;padding:9px 15px;border-radius:999px;background:#fff;color:#111827;font-weight:600;font-size:0.86rem;text-decoration:none;}
+.sent-banner-cta{display:inline-block;padding:9px 15px;border-radius:999px;background:#fff;color:var(--dark);font-weight:600;font-size:0.86rem;text-decoration:none;}
 .sent-banner-cta--rand{background:transparent;color:#fff;border:1px solid rgba(255,255,255,0.55);}
 .sent-banner-cta:hover{opacity:0.9;}
+
+/* Archivo für Überschriften – Inter allein auf jeder Ebene ist Teil des
+   generischen Eindrucks. Etwas engere Laufweite, damit Schlagzeilen sitzen. */
+h1,h2,h3,.section-title,.nav-logo-text,.footer-logo-text,.car-card-price,.hero-title{
+  font-family:'Archivo','Inter',system-ui,sans-serif;
+  letter-spacing:-0.022em;
+}
+.section-title{font-weight:700;}
+.section-eyebrow{letter-spacing:0.14em;font-weight:700;}
+
+/* Handlungsaufforderungen in Kupfer statt im Markenblau: Vorher sah jeder
+   Button gleich aus – Navigation, Filter und Absenden in derselben Farbe.
+   Jetzt trägt Petrol die Marke, Kupfer führt zur Handlung. */
+.nav-cta,.btn-submit,.hero-btn-primary{background:var(--accent);}
+.nav-cta:hover,.btn-submit:hover,.hero-btn-primary:hover{background:var(--accent-hover);}
+.btn-submit:disabled{background:var(--grey-2);cursor:wait;}
+
+/* Karten: feine Linie statt Dauerschatten */
+.car-card{box-shadow:none;border:1px solid var(--grey-3);transition:border-color 0.18s ease,transform 0.18s ease;}
+.car-card:hover{border-color:var(--blue);transform:translateY(-2px);box-shadow:var(--shadow-md);}
+
+/* Sichtbarer Fokus für Tastaturbedienung – fehlte komplett */
+a:focus-visible,button:focus-visible,input:focus-visible,
+select:focus-visible,textarea:focus-visible{
+  outline:2px solid var(--accent);outline-offset:2px;border-radius:2px;
+}
+
+/* Der schwebende WhatsApp-Knopf lag auf dem Hero-Text. Auf schmalen Displays
+   bekommt der Hero unten Platz, damit nichts verdeckt wird. */
+@media (max-width:768px){
+  .hero{padding-bottom:104px;}
+  #wa-float{bottom:18px;right:18px;}
+}
 </style>
 
 <script>
