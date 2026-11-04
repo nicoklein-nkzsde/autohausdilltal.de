@@ -2176,11 +2176,14 @@ function formDatenLesen(f){
   return raus;
 }
 
-function waText(f,art){
-  const z=formDatenLesen(f).map(([k,v])=>`${k}: ${v}`).join('\n');
-  const fotos=[...f.querySelectorAll('input[type=file]')].reduce((n,el)=>n+el.files.length,0);
+function waTextVon(felder,art,fotos){
+  const z=felder.map(([k,v])=>`${k}: ${v}`).join('\n');
   return `Anfrage über autohausdilltal.de (${art})\n\n${z}`+
          (fotos?`\n\n(${fotos} Foto${fotos>1?'s':''} sende ich gleich hier im Chat.)`:'');
+}
+function waText(f,art){
+  const fotos=[...f.querySelectorAll('input[type=file]')].reduce((n,el)=>n+el.files.length,0);
+  return waTextVon(formDatenLesen(f),art,fotos);
 }
 
 function zeigeBanner(text,typ,extra){
@@ -2194,7 +2197,7 @@ function zeigeBanner(text,typ,extra){
     +`<div class="sent-banner-text"><span>${text}</span>${extra||''}</div>`
     +'<button type="button" aria-label="Hinweis schließen" onclick="this.parentElement.remove()">&times;</button>';
   document.body.appendChild(el);
-  if(typ!=='fehler')setTimeout(()=>el.remove(),14000);
+  if(typ!=='fehler')setTimeout(()=>el.remove(),extra?30000:14000);
   return el;
 }
 
@@ -2284,11 +2287,20 @@ async function sendeFormular(ev,art){
 
   if(gesendet){
     try{localStorage.removeItem('formEntwurf_'+art);}catch(e){}
+    // Link vor dem Zuruecksetzen bauen, danach sind die Felder leer
+    const waKopie=`https://wa.me/${WA_NUMMER}?text=${encodeURIComponent(waTextVon(felder,art,fotos))}`;
     f.reset();
     const meld={ankauf:'Ihr Angebot ist bei uns eingegangen. Wir melden uns schnellstm\u00f6glich bei Ihnen.',
                 termin:'Ihre Terminanfrage ist eingegangen. Wir best\u00e4tigen den Termin in K\u00fcrze.',
                 kontakt:'Ihre Nachricht ist eingegangen. Wir melden uns schnellstm\u00f6glich bei Ihnen.'}[art];
-    zeigeBanner(meld,'ok','');
+    // Zusaetzlich auf Tamos Handy: ein Tipp des Kunden genuegt. Bei Fotos ist
+    // das ohnehin der einzige Weg, die Bilder in voller Groesse zu schicken.
+    zeigeBanner(meld,'ok',
+      `<div class="sent-banner-aktionen"><a class="sent-banner-cta" target="_blank" rel="noopener" href="${waKopie}">`
+      +(fotos?(fotos>1?`Jetzt die ${fotos} Fotos per WhatsApp senden`
+                      :'Jetzt das Foto per WhatsApp senden')
+             :'Anfrage zus\u00e4tzlich per WhatsApp schicken')
+      +'</a></div>');
   }else{
     // Niemals Erfolg melden, wenn keiner da ist. Der Kunde behaelt seine
     // Eingaben und bekommt einen Weg, der ohne fremden Dienst funktioniert.

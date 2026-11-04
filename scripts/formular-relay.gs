@@ -1,8 +1,9 @@
 /**
  * Formular-Relay für autohausdilltal.de
  * ---------------------------------------------------------------------------
- * Nimmt die Anfragen der drei Formulare (Ankauf, Termin, Kontakt) entgegen,
- * schreibt jede Anfrage in eine Google-Tabelle und schickt sie per Mail weiter.
+ * Nimmt die Anfragen der drei Formulare (Ankauf, Termin, Kontakt) entgegen und
+ * gibt sie auf drei Wegen weiter: Google-Tabelle, Mail und WhatsApp. Drei Wege
+ * deshalb, weil keiner davon allein verlaesslich genug ist.
  *
  * Warum selbst gehostet: Der vorher genutzte Dienst FormSubmit war am
  * 04.11.2026 über Stunden komplett ausgefallen (HTTP 522) – Anfragen gingen
@@ -16,6 +17,13 @@
 var EMPFAENGER   = 'autohausdilltal@web.de';
 var KOPIE        = 'nicoklein@nkzs.de';
 var TABELLEN_NAME = 'Anfragen autohausdilltal.de';
+
+// WhatsApp-Backup ueber CallMeBot. Nummer und Schluessel stehen bewusst NICHT
+// hier im Code, sondern in den Skripteigenschaften - das Repo ist oeffentlich.
+// Einrichtung: siehe scripts/FORMULAR-SETUP.md, Schritt 6.
+function waEinstellung(name) {
+  return PropertiesService.getScriptProperties().getProperty(name) || '';
+}
 
 var TITEL = {
   ankauf:  'Fahrzeugankauf-Anfrage über autohausdilltal.de',
@@ -69,8 +77,19 @@ function doPost(e) {
     if (absender) optionen.replyTo = absender;
     if (anhaenge.length) optionen.attachments = anhaenge;
 
-    MailApp.sendEmail(optionen);
-    return antwort({ ok: true, protokolliert: protokolliert });
+    var mailOk = false;
+    try { MailApp.sendEmail(optionen); mailOk = true; } catch (fehler) {}
+
+    // WhatsApp als dritter Weg. Schlaegt er fehl, aendert das nichts am
+    // Ergebnis - Tabelle und Mail sind die tragenden Wege.
+    var waOk = false;
+    try { waOk = perWhatsApp(art, felder, fotosGesamt(d)); } catch (fehler) {}
+
+    // Nur dann Erfolg melden, wenn die Anfrage wirklich irgendwo gelandet ist.
+    if (!protokolliert && !mailOk && !waOk) {
+      return antwort({ ok: false, fehler: 'kein Zustellweg erreichbar' });
+    }
+    return antwort({ ok: true, protokolliert: protokolliert, mail: mailOk, whatsapp: waOk });
 
   } catch (fehler) {
     return antwort({ ok: false, fehler: String(fehler) });
@@ -137,6 +156,39 @@ function inTabelleSchreiben(art, felder) {
   datei.getSheets()[0].appendRow([
     Utilities.formatDate(new Date(), 'Europe/Berlin', 'dd.MM.yyyy HH:mm'), art, text
   ]);
+}
+
+function fotosGesamt(d) { return (d && d.fotosGesamt) || 0; }
+
+/**
+ * Kurzfassung der Anfrage per WhatsApp an Tamo.
+ * CallMeBot ist ein kostenloser Fremddienst - deshalb nur als Backup neben
+ * Tabelle und Mail, nie als einziger Weg.
+ */
+function perWhatsApp(art, felder, fotos) {
+  var nummer    = waEinstellung('WHATSAPP_NUMMER');
+  var schluessel = waEinstellung('WHATSAPP_APIKEY');
+  if (!nummer || !schluessel) return false;
+
+  var kopf = { ankauf: 'Neue Ankauf-Anfrage', termin: 'Neue Terminanfrage', kontakt: 'Neue Kontaktanfrage' }[art]
+             || 'Neue Anfrage';
+  var text = kopf + ' (autohausdilltal.de)\n\n' +
+             felder.map(function (f) { return f[0] + ': ' + f[1]; }).join('\n');
+  if (fotos) text += '\n\n' + fotos + ' Foto(s) - im Mailanhang.';
+  if (text.length > 900) text = text.slice(0, 890) + '\n[gekuerzt - Rest per Mail]';
+
+  var url = 'https://api.callmebot.com/whatsapp.php?phone=' + encodeURIComponent(nummer) +
+            '&apikey=' + encodeURIComponent(schluessel) +
+            '&text=' + encodeURIComponent(text);
+
+  var res = UrlFetchApp.fetch(url, { muteHttpExceptions: true, followRedirects: true });
+  return res.getResponseCode() === 200;
+}
+
+/** Prueft nur den WhatsApp-Weg. */
+function testWhatsApp() {
+  var ok = perWhatsApp('kontakt', [['Name', 'Testlauf'], ['Telefon', '0151 68410570']], 0);
+  Logger.log(ok ? 'WhatsApp zugestellt' : 'WhatsApp NICHT zugestellt - Nummer/Schluessel pruefen');
 }
 
 /** Einmal von Hand ausführen, um die Zustellung zu prüfen. */
