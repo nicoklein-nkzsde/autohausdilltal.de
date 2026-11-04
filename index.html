@@ -2268,6 +2268,28 @@ async function sendeFormular(ev,art){
   // Eingaben sichern, falls der Versand scheitert oder die Seite neu laedt
   try{localStorage.setItem('formEntwurf_'+art,JSON.stringify(felder));}catch(e){}
 
+  // Uebergangsmodus: Solange RELAY_URL leer ist, gibt es keinen Serverweg, der
+  // haelt - FormSubmit ist seit dem 04.11.2026 ausgefallen. Dann wird die
+  // Anfrage direkt in WhatsApp geoeffnet, synchron und noch vor jedem await,
+  // damit der Browser das Fenster nicht als Popup blockiert. Der Zweig faellt
+  // von selbst weg, sobald die Relay-URL eingetragen ist.
+  if(!RELAY_URL){
+    const anzahl=[...f.querySelectorAll('input[type=file]')].reduce((n,el)=>n+el.files.length,0);
+    const ziel=`https://wa.me/${WA_NUMMER}?text=${encodeURIComponent(waTextVon(felder,art,anzahl))}`;
+    const fenster=window.open(ziel,'_blank','noopener');
+    const briefText=encodeURIComponent(waTextVon(felder,art,anzahl));
+    zeigeBanner(fenster
+        ?'Fast geschafft: Ihre Anfrage ist in WhatsApp fertig vorbereitet \u2013 bitte dort nur noch auf Senden tippen. Ihre Eingaben bleiben hier stehen.'
+        :'Ihre Anfrage ist fertig vorbereitet. Bitte senden Sie sie mit einem der Kn\u00f6pfe ab \u2013 Ihre Eingaben bleiben stehen.',
+      'fehler',
+      `<div class="sent-banner-aktionen">
+         <a class="sent-banner-cta" target="_blank" rel="noopener" href="${ziel}">${fenster?'WhatsApp erneut \u00f6ffnen':'Per WhatsApp senden'}</a>
+         <a class="sent-banner-cta sent-banner-cta--rand" href="mailto:${MAIL_ZIEL}?subject=${encodeURIComponent('Anfrage \u00fcber autohausdilltal.de ('+art+')')}&body=${briefText}">Per E-Mail senden</a>
+         <a class="sent-banner-cta sent-banner-cta--rand" href="tel:+${WA_NUMMER}">0151 68410570 anrufen</a>
+       </div>`);
+    return false;
+  }
+
   let gesendet=false,fehler=null,fotos=0;
   try{
     const sammlung=await anhaengeSammeln(f);
