@@ -1062,37 +1062,37 @@ footer{background:var(--dark-2);color:rgba(255,255,255,0.6);padding:48px 80px;di
     <div style="display:flex;align-items:center;gap:8px;font-size:0.82rem;color:var(--grey-1);margin-bottom:24px;"><span style="cursor:pointer;" onclick="showPage('home')">Startseite</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg><span style="color:var(--dark);font-weight:500;">Fahrzeugankauf</span></div>
     <h2 class="section-title">Fahrzeugankauf & Inzahlungnahme</h2>
     <p class="section-desc">Wir kaufen Ihr Fahrzeug fair und unkompliziert – auch ohne Gegenkauf. Füllen Sie das Formular aus und wir melden uns schnellstmöglich bei Ihnen.</p>
-    <div class="ankauf-form" style="margin-top:32px;max-width:860px;">
+    <form onsubmit="return sendeFormular(event,'ankauf')" action="https://formsubmit.co/autohausdilltal@web.de" method="POST" class="site-form"><input type="hidden" name="_subject" value="Fahrzeugankauf-Anfrage über autohausdilltal.de"><input type="hidden" name="_next" value="https://autohausdilltal.de/?gesendet=ankauf"><input type="hidden" name="_cc" value="nicoklein@nkzs.de"><input type="hidden" name="_captcha" value="false"><input type="hidden" name="_template" value="table"><input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off"><div class="ankauf-form" style="margin-top:32px;max-width:860px;">
       <div class="form-section-title">Fahrzeugdaten</div>
       <div class="form-grid">
-        <div class="form-group"><label class="form-label">Marke <span>*</span></label><input class="form-input" placeholder="z.B. BMW, Mercedes, Audi"></div>
-        <div class="form-group"><label class="form-label">Modell <span>*</span></label><input class="form-input" placeholder="z.B. 320d, C-Klasse, A4"></div>
-        <div class="form-group"><label class="form-label">Fahrzeug-Identifizierungsnummer (FIN)</label><input class="form-input" placeholder="17-stellige FIN"></div>
-        <div class="form-group"><label class="form-label">Erstzulassung</label><input class="form-input" type="date" placeholder="tt.mm.jjjj"></div>
-        <div class="form-group"><label class="form-label">Fahrzeugart</label><select class="form-select"><option value="">Bitte wählen</option><option>PKW</option><option>Kombi</option><option>SUV/Geländewagen</option><option>Van/Minibus</option><option>Coupé</option><option>Cabrio</option></select></div>
-        <div class="form-group"><label class="form-label">Kraftstoffart</label><select class="form-select"><option value="">Bitte wählen</option><option>Benzin</option><option>Diesel</option><option>Hybrid</option><option>Elektro</option><option>Gas</option></select></div>
-        <div class="form-group"><label class="form-label">Kilometerstand <span>*</span></label><input class="form-input" placeholder="z.B. 50000"></div>
-        <div class="form-group"><label class="form-label">Preisvorstellung (€) <span>*</span></label><input class="form-input" placeholder="z.B. 15000"></div>
-        <div class="form-group"><label class="form-label">Anzahl Vorbesitzer</label><input class="form-input" placeholder="z.B. 1"></div>
-        <div class="form-group"><label class="form-label">Leistung (PS)</label><input class="form-input" placeholder="z.B. 150"></div>
-        <div class="form-group"><label class="form-label">Schadstoffklasse</label><select class="form-select"><option value="">Bitte wählen</option><option>Euro 6</option><option>Euro 5</option><option>Euro 4</option><option>Euro 3</option></select></div>
-        <div class="form-group"><label class="form-label">Außenfarbe</label><select class="form-select"><option value="">Bitte wählen</option><option>Schwarz</option><option>Weiß</option><option>Grau/Silber</option><option>Blau</option><option>Rot</option><option>Grün</option><option>Braun/Beige</option><option>Sonstige</option></select></div>
-        <div class="form-group"><label class="form-label">Innenfarbe</label><select class="form-select"><option value="">Bitte wählen</option><option>Schwarz</option><option>Grau</option><option>Braun/Beige</option><option>Sonstige</option></select></div>
-        <div class="form-group"><label class="form-label">Polsterung</label><select class="form-select"><option value="">Bitte wählen</option><option>Stoff</option><option>Leder</option><option>Kunstleder</option><option>Alcantara</option></select></div>
-        <div class="form-group full"><label class="form-label"><input type="checkbox" class="form-checkbox" style="display:inline;margin-right:8px;">Metallic-Lackierung</label></div>
-        <div class="form-group full"><label class="form-label">Beschreibung / Besonderheiten</label><textarea class="form-textarea" placeholder="Beschreiben Sie Ihr Fahrzeug – Extras, Mängel, Besonderheiten..."></textarea></div>
-        <div class="form-group full"><label class="form-label">Fahrzeugbilder (max. 10)</label><input type="file" class="form-file" multiple accept="image/*"><div class="form-hint">Laden Sie Fotos Ihres Fahrzeugs hoch (JPG, PNG, max. 10 Bilder)</div></div>
-        <div class="form-group full"><label class="form-label">Fahrzeugpapiere – Brief & Schein (max. 5)</label><input type="file" class="form-file" multiple accept="image/*,.pdf"><div class="form-hint">Bitte laden Sie Bilder oder PDFs von Fahrzeugbrief und Fahrzeugschein hoch.</div></div>
+        <div class="form-group"><label class="form-label">Marke <span style="color:#EF4444">*</span></label><input class="form-input" placeholder="z.B. BMW, Mercedes, Audi" name="marke" required></div>
+        <div class="form-group"><label class="form-label">Modell <span style="color:#EF4444">*</span></label><input class="form-input" placeholder="z.B. 320d, C-Klasse, A4" name="modell" required></div>
+        <div class="form-group"><label class="form-label">Fahrzeug-Identifizierungsnummer (FIN)</label><input class="form-input" placeholder="17-stellige FIN" name="fahrzeug_identifizierungsnummer_fin"></div>
+        <div class="form-group"><label class="form-label">Erstzulassung</label><input class="form-input" type="date" placeholder="tt.mm.jjjj" name="erstzulassung"></div>
+        <div class="form-group"><label class="form-label">Fahrzeugart</label><select class="form-select" name="fahrzeugart"><option value="">Bitte wählen</option><option>PKW</option><option>Kombi</option><option>SUV/Geländewagen</option><option>Van/Minibus</option><option>Coupé</option><option>Cabrio</option></select></div>
+        <div class="form-group"><label class="form-label">Kraftstoffart</label><select class="form-select" name="kraftstoffart"><option value="">Bitte wählen</option><option>Benzin</option><option>Diesel</option><option>Hybrid</option><option>Elektro</option><option>Gas</option></select></div>
+        <div class="form-group"><label class="form-label">Kilometerstand <span style="color:#EF4444">*</span></label><input class="form-input" placeholder="z.B. 50000" name="kilometerstand" required></div>
+        <div class="form-group"><label class="form-label">Preisvorstellung (€) <span style="color:#EF4444">*</span></label><input class="form-input" placeholder="z.B. 15000" name="preisvorstellung" required></div>
+        <div class="form-group"><label class="form-label">Anzahl Vorbesitzer</label><input class="form-input" placeholder="z.B. 1" name="anzahl_vorbesitzer"></div>
+        <div class="form-group"><label class="form-label">Leistung (PS)</label><input class="form-input" placeholder="z.B. 150" name="leistung_ps"></div>
+        <div class="form-group"><label class="form-label">Schadstoffklasse</label><select class="form-select" name="schadstoffklasse"><option value="">Bitte wählen</option><option>Euro 6</option><option>Euro 5</option><option>Euro 4</option><option>Euro 3</option></select></div>
+        <div class="form-group"><label class="form-label">Außenfarbe</label><select class="form-select" name="aussenfarbe"><option value="">Bitte wählen</option><option>Schwarz</option><option>Weiß</option><option>Grau/Silber</option><option>Blau</option><option>Rot</option><option>Grün</option><option>Braun/Beige</option><option>Sonstige</option></select></div>
+        <div class="form-group"><label class="form-label">Innenfarbe</label><select class="form-select" name="innenfarbe"><option value="">Bitte wählen</option><option>Schwarz</option><option>Grau</option><option>Braun/Beige</option><option>Sonstige</option></select></div>
+        <div class="form-group"><label class="form-label">Polsterung</label><select class="form-select" name="polsterung"><option value="">Bitte wählen</option><option>Stoff</option><option>Leder</option><option>Kunstleder</option><option>Alcantara</option></select></div>
+        <div class="form-group full"><label class="form-label"><input type="checkbox" class="form-checkbox" style="display:inline;margin-right:8px;" name="metallic_lackierung" value="Ja">Metallic-Lackierung</label></div>
+        <div class="form-group full"><label class="form-label">Beschreibung / Besonderheiten</label><textarea class="form-textarea" placeholder="Beschreiben Sie Ihr Fahrzeug – Extras, Mängel, Besonderheiten..." name="beschreibung_besonderheiten"></textarea></div>
+        <div class="form-group full"><label class="form-label">Fahrzeugbilder (max. 10)</label><input type="file" class="form-file" multiple accept="image/*" name="fahrzeugbilder_max_10[]"><div class="form-hint">Laden Sie Fotos Ihres Fahrzeugs hoch (JPG, PNG, max. 10 Bilder)</div></div>
+        <div class="form-group full"><label class="form-label">Fahrzeugpapiere – Brief & Schein (max. 5)</label><input type="file" class="form-file" multiple accept="image/*,.pdf" name="fahrzeugpapiere_brief_schein_max_5[]"><div class="form-hint">Bitte laden Sie Bilder oder PDFs von Fahrzeugbrief und Fahrzeugschein hoch.</div></div>
       </div>
       <div class="form-section-title">Kontakt-Informationen</div>
       <div class="form-grid">
-        <div class="form-group"><label class="form-label">Name <span>*</span></label><input class="form-input" placeholder="Ihr Name"></div>
-        <div class="form-group"><label class="form-label">E-Mail <span>*</span></label><input class="form-input" type="email" placeholder="ihre@email.de"></div>
-        <div class="form-group"><label class="form-label">Telefon</label><input class="form-input" placeholder="+49 123 456789"></div>
+        <div class="form-group"><label class="form-label">Name <span style="color:#EF4444">*</span></label><input class="form-input" placeholder="Ihr Name" name="name" required></div>
+        <div class="form-group"><label class="form-label">E-Mail <span style="color:#EF4444">*</span></label><input class="form-input" type="email" placeholder="ihre@email.de" name="e_mail" required></div>
+        <div class="form-group"><label class="form-label">Telefon</label><input class="form-input" placeholder="+49 123 456789" name="telefon"></div>
       </div>
-      <div class="form-checkbox-row" style="margin-top:20px;"><input type="checkbox" class="form-checkbox"><span class="form-checkbox-label">Ich habe die <a href="#datenschutz" onclick="showPage('datenschutz');return false;">Datenschutzerklärung</a> zur Kenntnis genommen. <span style="color:#EF4444;">*</span></span></div>
-      <button class="btn-submit" onclick="submitAnkauf()">Angebot senden</button>
-    </div>
+      <div class="form-checkbox-row" style="margin-top:20px;"><input type="checkbox" class="form-checkbox" name="datenschutz_akzeptiert" value="Ja" required><span class="form-checkbox-label">Ich habe die <a href="#datenschutz" onclick="showPage('datenschutz');return false;">Datenschutzerklärung</a> zur Kenntnis genommen. <span style="color:#EF4444;">*</span></span></div>
+      <button type="submit" class="btn-submit">Angebot senden</button>
+    </div></form>
   </section>
   <footer><div class="footer-logo"><div class="footer-logo-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/><line x1="12" y1="2" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="22"/><line x1="2" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="22" y2="12"/></svg></div><span class="footer-logo-text">Autohaus Dilltal</span></div><div class="footer-legal"><button type="button" class="footer-legal-link" onclick="showPage('impressum')">Impressum</button><button type="button" class="footer-legal-link" onclick="showPage('datenschutz')">Datenschutzerklärung</button></div><span class="footer-copy">© <span class="copyYear">2026</span> Autohaus Dilltal</span></footer>
 </div>
@@ -1188,7 +1188,7 @@ footer{background:var(--dark-2);color:rgba(255,255,255,0.6);padding:48px 80px;di
           </div>
           <div class="open-slot-title">Offene Stelle</div>
           <div class="open-slot-desc">Wir suchen Verstärkung für unser Team. Position wird noch bekannt gegeben.</div>
-          <button class="open-slot-cta">Jetzt bewerben</button>
+          <button type="button" class="open-slot-cta" onclick="bewerbung()">Jetzt bewerben</button>
         </div>
       </div>
 
@@ -1200,7 +1200,7 @@ footer{background:var(--dark-2);color:rgba(255,255,255,0.6);padding:48px 80px;di
           </div>
           <div class="open-slot-title">Offene Stelle</div>
           <div class="open-slot-desc">Wir wachsen weiter. Haben Sie Interesse? Melden Sie sich bei uns.</div>
-          <button class="open-slot-cta">Jetzt bewerben</button>
+          <button type="button" class="open-slot-cta" onclick="bewerbung()">Jetzt bewerben</button>
         </div>
       </div>
 
@@ -1302,14 +1302,14 @@ footer{background:var(--dark-2);color:rgba(255,255,255,0.6);padding:48px 80px;di
       </div>
       <div class="kontakt-form-card">
         <h3>Nachricht senden</h3>
-        <div class="form-grid">
-          <div class="form-group"><label class="form-label">Name <span style="color:#EF4444">*</span></label><input class="form-input" placeholder="Ihr Name"></div>
-          <div class="form-group"><label class="form-label">E-Mail <span style="color:#EF4444">*</span></label><input class="form-input" type="email" placeholder="ihre@email.de"></div>
-          <div class="form-group"><label class="form-label">Telefon</label><input class="form-input" placeholder="+49 123 456789"></div>
-          <div class="form-group"><label class="form-label">Betreff</label><input class="form-input" placeholder="Ihr Anliegen"></div>
-          <div class="form-group full"><label class="form-label">Nachricht <span style="color:#EF4444">*</span></label><textarea class="form-textarea" style="min-height:120px;" placeholder="Wie können wir Ihnen helfen?"></textarea></div>
+        <form onsubmit="return sendeFormular(event,'kontakt')" action="https://formsubmit.co/autohausdilltal@web.de" method="POST" class="site-form"><input type="hidden" name="_subject" value="Kontaktanfrage über autohausdilltal.de"><input type="hidden" name="_next" value="https://autohausdilltal.de/?gesendet=kontakt"><input type="hidden" name="_cc" value="nicoklein@nkzs.de"><input type="hidden" name="_captcha" value="false"><input type="hidden" name="_template" value="table"><input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off"><div class="form-grid">
+          <div class="form-group"><label class="form-label">Name <span style="color:#EF4444">*</span></label><input class="form-input" placeholder="Ihr Name" name="name" required></div>
+          <div class="form-group"><label class="form-label">E-Mail <span style="color:#EF4444">*</span></label><input class="form-input" type="email" placeholder="ihre@email.de" name="e_mail" required></div>
+          <div class="form-group"><label class="form-label">Telefon</label><input class="form-input" placeholder="+49 123 456789" name="telefon"></div>
+          <div class="form-group"><label class="form-label">Betreff</label><input class="form-input" placeholder="Ihr Anliegen" name="betreff"></div>
+          <div class="form-group full"><label class="form-label">Nachricht <span style="color:#EF4444">*</span></label><textarea class="form-textarea" style="min-height:120px;" placeholder="Wie können wir Ihnen helfen?" name="nachricht" required></textarea></div>
         </div>
-        <button class="btn-submit">Nachricht senden</button>
+        <button type="submit" class="btn-submit">Nachricht senden</button></form>
       </div>
     </div>
   </section>
@@ -1354,7 +1354,7 @@ footer{background:var(--dark-2);color:rgba(255,255,255,0.6);padding:48px 80px;di
 
       <div>
         <h3 style="font-size:0.9rem;font-weight:700;color:var(--dark);margin-bottom:12px;text-transform:uppercase;letter-spacing:0.06em;">Kontakt-, Termin- und Ankaufformulare</h3>
-        <p style="color:var(--grey-1);line-height:1.8;font-size:0.95rem;">Die Formulare auf dieser Website werden über den Dienst FormSubmit (formsubmit.co) verarbeitet und als E-Mail an uns weitergeleitet. Übertragen werden die von Ihnen eingegebenen Daten – je nach Formular Name, E-Mail-Adresse, Telefonnummer, Nachricht sowie beim Fahrzeugankauf Angaben und Fotos zu Ihrem Fahrzeug. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO (Anbahnung eines Vertragsverhältnisses) bzw. Art. 6 Abs. 1 lit. f DSGVO bei allgemeinen Anfragen. Wir speichern Ihre Anfrage, bis sie abschließend bearbeitet ist, und löschen sie anschließend, soweit keine gesetzlichen Aufbewahrungsfristen entgegenstehen.</p>
+        <p style="color:var(--grey-1);line-height:1.8;font-size:0.95rem;">Die Formulare auf dieser Website werden über den Dienst FormSubmit (formsubmit.co, betrieben von Archison LLC) verarbeitet und als E-Mail an uns weitergeleitet. Eine Kopie geht an den technischen Betreuer der Website (Nico Klein, kaizoprod), der uns bei Betrieb und Wartung unterstützt und dabei als Auftragsverarbeiter nach Art. 28 DSGVO tätig wird. Übertragen werden die von Ihnen eingegebenen Daten – je nach Formular Name, E-Mail-Adresse, Telefonnummer, Nachricht sowie beim Fahrzeugankauf Angaben und Fotos zu Ihrem Fahrzeug. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO (Anbahnung eines Vertragsverhältnisses) bzw. Art. 6 Abs. 1 lit. f DSGVO bei allgemeinen Anfragen. Wir speichern Ihre Anfrage, bis sie abschließend bearbeitet ist, und löschen sie anschließend, soweit keine gesetzlichen Aufbewahrungsfristen entgegenstehen.</p>
       </div>
 
       <div>
@@ -1489,13 +1489,13 @@ footer{background:var(--dark-2);color:rgba(255,255,255,0.6);padding:48px 80px;di
     <!-- TERMIN FORM -->
     <div style="background:white;border:1px solid var(--grey-3);border-radius:var(--radius-lg);padding:32px;">
       <h3 style="font-size:1.1rem;font-weight:700;margin-bottom:20px;">Termin anfragen</h3>
-      <div class="form-grid">
-        <div class="form-group"><label class="form-label">Ihr Name <span style="color:#EF4444">*</span></label><input class="form-input" placeholder="Vor- und Nachname"></div>
-        <div class="form-group"><label class="form-label">Telefon <span style="color:#EF4444">*</span></label><input class="form-input" placeholder="0151 ..."></div>
-        <div class="form-group"><label class="form-label">E-Mail</label><input class="form-input" type="email" placeholder="ihre@email.de"></div>
-        <div class="form-group"><label class="form-label">Gewünschtes Fahrzeug</label><input class="form-input" placeholder="z.B. Mercedes GLE, BMW 3er..."></div>
-        <div class="form-group"><label class="form-label">Wunschtermin</label><input class="form-input" type="date"></div>
-        <div class="form-group"><label class="form-label">Uhrzeit (Wunsch)</label><select class="form-select"><option>Beliebig</option><option>11:30 – 13:00</option><option>13:00 – 15:00</option><option>15:00 – 17:00</option><option>17:00 – 18:00</option></select></div>
+      <form onsubmit="return sendeFormular(event,'termin')" action="https://formsubmit.co/autohausdilltal@web.de" method="POST" class="site-form"><input type="hidden" name="_subject" value="Terminanfrage über autohausdilltal.de"><input type="hidden" name="_next" value="https://autohausdilltal.de/?gesendet=termin"><input type="hidden" name="_cc" value="nicoklein@nkzs.de"><input type="hidden" name="_captcha" value="false"><input type="hidden" name="_template" value="table"><input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off"><div class="form-grid">
+        <div class="form-group"><label class="form-label">Ihr Name <span style="color:#EF4444">*</span></label><input class="form-input" placeholder="Vor- und Nachname" name="ihr_name" required></div>
+        <div class="form-group"><label class="form-label">Telefon <span style="color:#EF4444">*</span></label><input class="form-input" placeholder="0151 ..." name="telefon" required></div>
+        <div class="form-group"><label class="form-label">E-Mail</label><input class="form-input" type="email" placeholder="ihre@email.de" name="e_mail"></div>
+        <div class="form-group"><label class="form-label">Gewünschtes Fahrzeug</label><input class="form-input" placeholder="z.B. Mercedes GLE, BMW 3er..." name="gewuenschtes_fahrzeug"></div>
+        <div class="form-group"><label class="form-label">Wunschtermin</label><input class="form-input" type="date" name="wunschtermin"></div>
+        <div class="form-group"><label class="form-label">Uhrzeit (Wunsch)</label><select class="form-select" name="uhrzeit_wunsch"><option>Beliebig</option><option>11:30 – 13:00</option><option>13:00 – 15:00</option><option>15:00 – 17:00</option><option>17:00 – 18:00</option></select></div>
         <div class="form-group full"><label class="form-label">Art des Termins</label>
           <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:4px;">
             <label style="display:flex;align-items:center;gap:8px;cursor:pointer;font-size:0.88rem;padding:10px 16px;border:1.5px solid var(--grey-3);border-radius:var(--radius-sm);"><input type="radio" name="terminart" value="probefahrt" style="accent-color:var(--blue);"> Probefahrt</label>
@@ -1504,15 +1504,15 @@ footer{background:var(--dark-2);color:rgba(255,255,255,0.6);padding:48px 80px;di
             <label style="display:flex;align-items:center;gap:8px;cursor:pointer;font-size:0.88rem;padding:10px 16px;border:1.5px solid var(--grey-3);border-radius:var(--radius-sm);"><input type="radio" name="terminart" value="ankauf"> Fahrzeug abgeben</label>
           </div>
         </div>
-        <div class="form-group full"><label class="form-label">Anmerkungen</label><textarea class="form-textarea" placeholder="Haben Sie besondere Wünsche oder Fragen?"></textarea></div>
+        <div class="form-group full"><label class="form-label">Anmerkungen</label><textarea class="form-textarea" placeholder="Haben Sie besondere Wünsche oder Fragen?" name="anmerkungen"></textarea></div>
       </div>
       <div style="display:flex;gap:12px;margin-top:20px;flex-wrap:wrap;">
-        <button class="btn-submit" style="flex:1;min-width:200px;" onclick="alert('Vielen Dank! Wir melden uns schnellstmöglich.')">Termin anfragen</button>
+        <button type="submit" class="btn-submit" style="flex:1;min-width:200px;">Termin anfragen</button>
         <a href="https://wa.me/4915168410570?text=Hallo%2C%20ich%20möchte%20gerne%20einen%20Termin%20vereinbaren." target="_blank" style="display:flex;align-items:center;gap:8px;padding:14px 24px;background:#22C55E;color:white;border-radius:var(--radius-sm);font-weight:700;font-size:0.9rem;text-decoration:none;transition:all 0.2s;" onmouseover="this.style.background='#16A34A'" onmouseout="this.style.background='#22C55E'">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
           Per WhatsApp
         </a>
-      </div>
+      </div></form>
     </div>
   </section>
   <footer><div class="footer-logo"><div class="footer-logo-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/><line x1="12" y1="2" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="22"/><line x1="2" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="22" y2="12"/></svg></div><span class="footer-logo-text">Autohaus Dilltal</span></div><div class="footer-legal"><button type="button" class="footer-legal-link" onclick="showPage('impressum')">Impressum</button><button type="button" class="footer-legal-link" onclick="showPage('datenschutz')">Datenschutzerklärung</button></div><span class="footer-copy">© <span class="copyYear">2026</span> Autohaus Dilltal</span></footer>
@@ -1655,6 +1655,17 @@ footer{background:var(--dark-2);color:rgba(255,255,255,0.6);padding:48px 80px;di
 @media(max-width:1024px){.team-grid{grid-template-columns:repeat(2,1fr);}}
 @media(max-width:560px){.team-grid{grid-template-columns:1fr;}}
 
+
+.sent-banner{position:fixed;left:50%;bottom:28px;transform:translateX(-50%);z-index:10000;display:flex;align-items:center;gap:12px;max-width:min(560px,calc(100vw - 32px));padding:16px 18px;border-radius:12px;background:#065F46;color:#fff;box-shadow:0 12px 40px rgba(0,0,0,0.25);font-size:0.94rem;line-height:1.5;}
+.sent-banner button{background:none;border:none;color:#fff;font-size:1.3rem;line-height:1;cursor:pointer;padding:0 2px;opacity:0.8;}
+.sent-banner button:hover{opacity:1;}
+
+.sent-banner-text{display:flex;flex-direction:column;gap:10px;}
+.sent-banner--fehler{background:#7F1D1D;align-items:flex-start;}
+.sent-banner-aktionen{display:flex;gap:8px;flex-wrap:wrap;}
+.sent-banner-cta{display:inline-block;padding:9px 15px;border-radius:999px;background:#fff;color:#111827;font-weight:600;font-size:0.86rem;text-decoration:none;}
+.sent-banner-cta--rand{background:transparent;color:#fff;border:1px solid rgba(255,255,255,0.55);}
+.sent-banner-cta:hover{opacity:0.9;}
 </style>
 
 <script>
@@ -1877,7 +1888,6 @@ function resetFilter(){
   filteredCars=[...staticCars];
   renderFahrzeugeGrid(filteredCars);
 }
-function submitAnkauf(){alert('Vielen Dank! Ihr Angebot wurde gesendet. Wir melden uns schnellstmöglich bei Ihnen.');}
 
 // ── NAVBAR ──
 function toggleDropdown(){
@@ -2002,6 +2012,142 @@ function loadMap(){
 }
 
 document.querySelectorAll('.copyYear').forEach(e=>{e.textContent=new Date().getFullYear();});
+
+// Nach dem Absenden leitet FormSubmit auf ?gesendet=… zurück. Die Bestätigung
+// erscheint also erst, wenn der Versand tatsächlich durch war – vorher behauptete
+// die Seite den Erfolg, ohne überhaupt etwas zu senden.
+(function(){
+  const art=new URLSearchParams(location.search).get('gesendet');
+  if(!art)return;
+  const texte={
+    ankauf:'Ihr Angebot ist bei uns eingegangen. Wir melden uns schnellstmöglich bei Ihnen.',
+    termin:'Ihre Terminanfrage ist eingegangen. Wir bestätigen den Termin in Kürze.',
+    kontakt:'Ihre Nachricht ist eingegangen. Wir melden uns schnellstmöglich bei Ihnen.'
+  };
+  const el=document.createElement('div');
+  el.className='sent-banner';
+  el.setAttribute('role','status');
+  el.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>'
+    +'<span>'+(texte[art]||'Ihre Anfrage ist eingegangen.')+'</span>'
+    +'<button type="button" aria-label="Hinweis schließen" onclick="this.parentElement.remove()">&times;</button>';
+  document.body.appendChild(el);
+  history.replaceState({},'',location.pathname);
+  setTimeout(()=>el.remove(),12000);
+})();
+
+// Führt von den Stellenanzeigen ins Kontaktformular, mit gesetztem Betreff.
+function bewerbung(){
+  showPage('kontakt');
+  setTimeout(()=>{
+    const f=document.querySelector('#page-kontakt form');
+    if(!f)return;
+    const betreff=f.querySelector('[name="betreff"]');
+    if(betreff&&!betreff.value)betreff.value='Bewerbung';
+    f.scrollIntoView({behavior:'smooth',block:'center'});
+    f.querySelector('[name="name"]')?.focus({preventScroll:true});
+  },260);
+}
+
+// ══════════════ FORMULARVERSAND ══════════════
+// Vorgeschichte: Die drei Formulare haben nie etwas gesendet – der Button zeigte
+// nur eine Erfolgsmeldung. Deshalb hier die Regel: Die Bestaetigung erscheint
+// ausschliesslich nach einer bestaetigten Antwort des Servers. Schlaegt der
+// Versand fehl, bleibt alles Eingetippte stehen und der Kunde bekommt einen
+// Weg angeboten, der ohne fremden Dienst funktioniert.
+const FORM_ENDPOINT='https://formsubmit.co/ajax/autohausdilltal@web.de';
+const WA_NUMMER='4915168410570';
+
+function formDatenLesen(f){
+  const raus=[];
+  f.querySelectorAll('input,select,textarea').forEach(el=>{
+    if(!el.name||el.name.startsWith('_')||el.type==='file')return;
+    if((el.type==='checkbox'||el.type==='radio')&&!el.checked)return;
+    if(!el.value||el.value==='Bitte wählen')return;
+    const grp=el.closest('.form-group,.form-checkbox-row');
+    const lab=grp&&grp.querySelector('.form-label,.form-checkbox-label');
+    const titel=lab?lab.textContent.replace('*','').trim():el.name;
+    raus.push([titel,el.value]);
+  });
+  return raus;
+}
+
+function waText(f,art){
+  const z=formDatenLesen(f).map(([k,v])=>`${k}: ${v}`).join('\n');
+  const fotos=[...f.querySelectorAll('input[type=file]')].reduce((n,el)=>n+el.files.length,0);
+  return `Anfrage über autohausdilltal.de (${art})\n\n${z}`+
+         (fotos?`\n\n(${fotos} Foto${fotos>1?'s':''} sende ich gleich hier im Chat.)`:'');
+}
+
+function zeigeBanner(text,typ,extra){
+  document.querySelectorAll('.sent-banner').forEach(e=>e.remove());
+  const el=document.createElement('div');
+  el.className='sent-banner'+(typ==='fehler'?' sent-banner--fehler':'');
+  el.setAttribute('role','status');
+  el.innerHTML=(typ==='fehler'
+      ?'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v5M12 16h.01"/></svg>'
+      :'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>')
+    +`<div class="sent-banner-text"><span>${text}</span>${extra||''}</div>`
+    +'<button type="button" aria-label="Hinweis schließen" onclick="this.parentElement.remove()">&times;</button>';
+  document.body.appendChild(el);
+  if(typ!=='fehler')setTimeout(()=>el.remove(),14000);
+  return el;
+}
+
+async function sendeFormular(ev,art){
+  ev.preventDefault();
+  const f=ev.target;
+  if(!f.reportValidity())return false;
+
+  const btn=f.querySelector('button[type=submit]');
+  const alt=btn?btn.innerHTML:'';
+  if(btn){btn.disabled=true;btn.innerHTML='Wird gesendet …';}
+
+  // Eingaben sichern, falls der Versand scheitert oder die Seite neu lädt
+  try{localStorage.setItem('formEntwurf_'+art,JSON.stringify(formDatenLesen(f)));}catch(e){}
+
+  const daten=new FormData(f);
+  const fotos=[...f.querySelectorAll('input[type=file]')].reduce((n,el)=>n+el.files.length,0);
+  if(fotos)daten.append('Hinweis Fotos',`${fotos} Foto(s) werden separat per WhatsApp nachgereicht`);
+  daten.delete('_next');daten.delete('_template');
+
+  const abbruch=new AbortController();
+  const frist=setTimeout(()=>abbruch.abort(),20000);
+  try{
+    const res=await fetch(FORM_ENDPOINT,{method:'POST',body:daten,
+      headers:{'Accept':'application/json'},signal:abbruch.signal});
+    clearTimeout(frist);
+    const txt=await res.text();
+    if(!res.ok)throw new Error('HTTP '+res.status+' '+txt.slice(0,120));
+    let ok=true;
+    try{ok=JSON.parse(txt).success!==false;}catch(e){}
+    if(!ok)throw new Error(txt.slice(0,160));
+
+    try{localStorage.removeItem('formEntwurf_'+art);}catch(e){}
+    f.reset();
+    const meld={ankauf:'Ihr Angebot ist bei uns eingegangen. Wir melden uns schnellstmöglich bei Ihnen.',
+                termin:'Ihre Terminanfrage ist eingegangen. Wir bestätigen den Termin in Kürze.',
+                kontakt:'Ihre Nachricht ist eingegangen. Wir melden uns schnellstmöglich bei Ihnen.'}[art];
+    zeigeBanner(meld,'ok',fotos
+      ?`<a class="sent-banner-cta" target="_blank" rel="noopener" href="https://wa.me/${WA_NUMMER}?text=${encodeURIComponent('Hallo, ich habe gerade ein Ankaufangebot über Ihre Website gesendet. Hier die Fotos zum Fahrzeug:')}">Jetzt die ${fotos} Foto${fotos>1?'s':''} per WhatsApp senden</a>`
+      :'');
+  }catch(err){
+    clearTimeout(frist);
+    // Niemals Erfolg melden, wenn keiner da ist. Der Kunde bekommt einen Weg,
+    // der ohne den ausgefallenen Dienst funktioniert, und behält seine Eingaben.
+    console.error('Formularversand fehlgeschlagen:',err);
+    zeigeBanner(
+      'Das Absenden hat nicht geklappt – unser Formulardienst antwortet gerade nicht. '
+      +'Ihre Eingaben stehen noch da. Bitte schicken Sie uns die Anfrage direkt:','fehler',
+      `<div class="sent-banner-aktionen">
+         <a class="sent-banner-cta" target="_blank" rel="noopener" href="https://wa.me/${WA_NUMMER}?text=${encodeURIComponent(waText(f,art))}">Per WhatsApp senden</a>
+         <a class="sent-banner-cta sent-banner-cta--rand" href="tel:+${WA_NUMMER}">0151 68410570 anrufen</a>
+         <a class="sent-banner-cta sent-banner-cta--rand" href="mailto:autohausdilltal@web.de?subject=${encodeURIComponent('Anfrage über autohausdilltal.de ('+art+')')}&body=${encodeURIComponent(waText(f,art))}">Per E-Mail senden</a>
+       </div>`);
+  }finally{
+    if(btn){btn.disabled=false;btn.innerHTML=alt;}
+  }
+  return false;
+}
 
 // ── INIT ──
 renderHomeGrid();
