@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-11-05T00:37:21+00:00",
+  "syncedAt": "2026-11-05T18:37:28+00:00",
   "source": "live",
   "count": 23,
   "cars": [
@@ -241,7 +241,7 @@
       "kw": 92,
       "fuel": "Benzin",
       "gear": "",
-      "price": 11495,
+      "price": 11200,
       "condition": "Gebraucht",
       "unfallfrei": "",
       "hubraum": "",
