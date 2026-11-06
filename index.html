@@ -772,7 +772,7 @@ footer{background:var(--dark-2);color:rgba(255,255,255,0.6);padding:48px 80px;di
       </div>
     </div>
     <div class="car-grid" id="homeCarGrid">
-      <div style="grid-column:1/-1;text-align:center;padding:60px;color:var(--grey-1);">
+      <div class="leer-hinweis" style="grid-column:1/-1;text-align:center;color:var(--grey-1);">
         <div style="width:36px;height:36px;border:2px solid var(--grey-3);border-top-color:var(--blue);border-radius:50%;animation:spin 0.7s linear infinite;margin:0 auto 16px;"></div>
         23 Fahrzeuge verfügbar — alle geprüft, sofort fahrbereit.
       </div>
@@ -780,8 +780,8 @@ footer{background:var(--dark-2);color:rgba(255,255,255,0.6);padding:48px 80px;di
   </section>
 
   <!-- FINANZIERUNG & GARANTIE HIGHLIGHT -->
-  <section style="padding:80px 80px;background:linear-gradient(135deg,#0E3346 0%,#14425A 55%,#1B5570 100%);">
-    <div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;">
+  <section class="section" style="background:linear-gradient(135deg,#0E3346 0%,#14425A 55%,#1B5570 100%);">
+    <div class="fin-grid" style="max-width:1200px;margin:0 auto;display:grid;align-items:center;">
       <div>
         <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.15);padding:6px 16px;border-radius:6px;font-size:0.72rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.9);margin-bottom:20px;"> Unser Versprechen</div>
         <h2 style="font-family:Inter,sans-serif;font-size:clamp(1.8rem,3vw,2.6rem);font-weight:800;color:white;line-height:1.1;letter-spacing:-0.03em;margin-bottom:20px;">Finanzierung ab<br><span style="font-size:1.2em;">49 € mtl.</span> + bis zu<br>5 Jahre Garantie</h2>
@@ -791,21 +791,21 @@ footer{background:var(--dark-2);color:rgba(255,255,255,0.6);padding:48px 80px;di
           <button onclick="showPage('termin')" style="padding:14px 28px;background:rgba(255,255,255,0.15);color:white;border:2px solid rgba(255,255,255,0.4);border-radius:6px;font-weight:600;font-size:0.9rem;cursor:pointer;transition:all 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.25)'" onmouseout="this.style.background='rgba(255,255,255,0.15)'">Termin vereinbaren</button>
         </div>
       </div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+      <div class="fin-zahlen" style="display:grid;gap:16px;">
         <div style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);border-radius:16px;padding:24px;text-align:center;">
-          <div style="font-size:2.2rem;font-weight:800;color:white;letter-spacing:-0.04em;line-height:1;">ab 49€</div>
+          <div class="fin-zahl">ab 49€</div>
           <div style="font-size:0.8rem;color:rgba(255,255,255,0.7);margin-top:6px;">monatliche Rate</div>
         </div>
         <div style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);border-radius:16px;padding:24px;text-align:center;">
-          <div style="font-size:2.2rem;font-weight:800;color:white;letter-spacing:-0.04em;line-height:1;">5 Jahre</div>
+          <div class="fin-zahl">5 Jahre</div>
           <div style="font-size:0.8rem;color:rgba(255,255,255,0.7);margin-top:6px;">Garantie möglich</div>
         </div>
         <div style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);border-radius:16px;padding:24px;text-align:center;">
-          <div style="font-size:2.2rem;font-weight:800;color:white;letter-spacing:-0.04em;line-height:1;">0€</div>
+          <div class="fin-zahl">0€</div>
           <div style="font-size:0.8rem;color:rgba(255,255,255,0.7);margin-top:6px;">Bearbeitungsgebühr</div>
         </div>
         <div style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);border-radius:16px;padding:24px;text-align:center;">
-          <div style="font-size:2.2rem;font-weight:800;color:white;letter-spacing:-0.04em;line-height:1;">100%</div>
+          <div class="fin-zahl">100%</div>
           <div style="font-size:0.8rem;color:rgba(255,255,255,0.7);margin-top:6px;">TÜV-geprüft</div>
         </div>
       </div>
@@ -813,7 +813,7 @@ footer{background:var(--dark-2);color:rgba(255,255,255,0.6);padding:48px 80px;di
   </section>
 
   <!-- PROBEFAHRT CTA BANNER -->
-  <section style="padding:60px 80px;background:var(--grey-5);border-top:1px solid var(--grey-3);border-bottom:1px solid var(--grey-3);">
+  <section class="section-sm" style="background:var(--grey-5);border-top:1px solid var(--grey-3);border-bottom:1px solid var(--grey-3);">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap;">
       <div style="display:flex;align-items:center;gap:24px;">
         <div style="width:64px;height:64px;border-radius:50%;background:var(--blue-light);display:flex;align-items:center;justify-content:center;color:var(--blue);flex-shrink:0;">
@@ -835,7 +835,7 @@ footer{background:var(--dark-2);color:rgba(255,255,255,0.6);padding:48px 80px;di
   </section>
 
   <!-- GOOGLE BEWERTUNGEN -->
-  <section style="padding:80px 80px;background:white;">
+  <section class="section" style="background:white;">
     <div style="max-width:1200px;margin:0 auto;">
       <div style="text-align:center;margin-bottom:48px;">
         <div class="section-eyebrow" style="justify-content:center;"> Google Bewertungen</div>
@@ -854,7 +854,7 @@ footer{background:var(--dark-2);color:rgba(255,255,255,0.6);padding:48px 80px;di
           </a>
         </div>
       </div>
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;" id="reviewsGrid">
+      <div class="rgrid-3" style="display:grid;gap:20px;" id="reviewsGrid">
         <!-- Static reviews -->
         <div style="background:white;border:1px solid var(--grey-3);border-radius:var(--radius-lg);padding:24px;box-shadow:var(--shadow);">
           <div style="color:#FBBF24;font-size:0.9rem;letter-spacing:2px;margin-bottom:12px;">★★★★★</div>
@@ -1038,7 +1038,7 @@ footer{background:var(--dark-2);color:rgba(255,255,255,0.6);padding:48px 80px;di
     </div>
 
     <div class="car-grid" id="fahrzeugeGrid">
-      <div style="grid-column:1/-1;text-align:center;padding:60px;color:var(--grey-1);">23 Fahrzeuge verfügbar — alle geprüft, sofort fahrbereit.</div>
+      <div class="leer-hinweis" style="grid-column:1/-1;text-align:center;color:var(--grey-1);">23 Fahrzeuge verfügbar — alle geprüft, sofort fahrbereit.</div>
     </div>
   </section>
   <footer>
@@ -1284,7 +1284,7 @@ footer{background:var(--dark-2);color:rgba(255,255,255,0.6);padding:48px 80px;di
     </div>
 
     <!-- VALUES STRIP -->
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:72px;padding-top:48px;border-top:1px solid var(--grey-3);">
+    <div class="rgrid-3" style="display:grid;gap:24px;margin-top:72px;padding-top:48px;border-top:1px solid var(--grey-3);">
       <div class="fade-in" style="text-align:center;">
         <div style="width:48px;height:48px;border-radius:50%;background:var(--blue-light);display:flex;align-items:center;justify-content:center;color:var(--blue);margin:0 auto 14px;">
           <svg width="22" height="22" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
@@ -1538,7 +1538,7 @@ footer{background:var(--dark-2);color:rgba(255,255,255,0.6);padding:48px 80px;di
     <p class="section-desc">Überzeugen Sie sich selbst – vereinbaren Sie eine kostenlose Probefahrt oder einen persönlichen Beratungstermin. Einfach, schnell, unverbindlich.</p>
 
     <!-- HOW IT WORKS -->
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin:48px 0;">
+    <div class="rgrid-3" style="display:grid;gap:24px;margin:48px 0;">
       <div style="text-align:center;padding:28px 20px;background:var(--grey-5);border-radius:var(--radius-lg);border:1px solid var(--grey-3);">
         <div style="width:52px;height:52px;border-radius:50%;background:var(--blue);color:white;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-family:Inter,sans-serif;font-weight:800;font-size:1.1rem;">1</div>
         <h3 style="font-size:0.95rem;font-weight:700;margin-bottom:8px;">Fahrzeug auswählen</h3>
@@ -1596,7 +1596,7 @@ footer{background:var(--dark-2);color:rgba(255,255,255,0.6);padding:48px 80px;di
     <h2 class="section-title">Inzahlungnahme-Rechner</h2>
     <p class="section-desc">Erhalten Sie sofort eine erste Schätzung für Ihr Fahrzeug. Der Wert wird anhand von Marktdaten berechnet – die finale Bewertung erfolgt persönlich vor Ort.</p>
 
-    <div style="background:white;border:1px solid var(--grey-3);border-radius:var(--radius-lg);padding:36px;margin-top:36px;">
+    <div class="info-karte" style="background:white;border:1px solid var(--grey-3);border-radius:var(--radius-lg);margin-top:36px;">
       <div class="form-grid">
         <div class="form-group"><label class="form-label">Marke <span style="color:#EF4444">*</span></label>
           <select class="form-select" id="rMarke" onchange="updateRechner()">
@@ -1648,7 +1648,7 @@ footer{background:var(--dark-2);color:rgba(255,255,255,0.6);padding:48px 80px;di
         <div style="display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:20px;">
           <div>
             <div style="font-size:0.78rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:var(--grey-1);margin-bottom:8px;">Geschätzter Ankaufswert</div>
-            <div id="rechnerWert" style="font-family:Inter,sans-serif;font-size:2.8rem;font-weight:800;color:var(--blue);letter-spacing:-0.03em;line-height:1;">–</div>
+            <div id="rechnerWert" style="font-family:Inter,sans-serif;font-weight:800;color:var(--blue);letter-spacing:-0.03em;line-height:1;">–</div>
             <div style="font-size:0.8rem;color:var(--grey-1);margin-top:6px;">* Erste Schätzung auf Basis Ihrer Angaben. Finale Bewertung vor Ort.</div>
           </div>
           <div style="display:flex;flex-direction:column;gap:10px;">
@@ -1698,6 +1698,51 @@ footer{background:var(--dark-2);color:rgba(255,255,255,0.6);padding:48px 80px;di
 
 <style>
 @keyframes spin{to{transform:rotate(360deg);}}
+
+/* Diese Raster standen fest im HTML und wurden deshalb von keiner Media Query
+   erreicht: Auf dem Handy rechnete das Finanzierungsband mit 512px Breite bei
+   375px Platz - die Ueberschrift wurde zerquetscht, die rechte Spalte lag
+   ausserhalb des Bildschirms. */
+.fin-grid{grid-template-columns:1fr 1fr;gap:60px;}
+.fin-zahlen{grid-template-columns:1fr 1fr;}
+.rgrid-3{grid-template-columns:repeat(3,1fr);}
+.leer-hinweis{padding:60px;}
+/* Grosse Zahlen: auf schmalen Geraeten war "5 Jahre" bei festen 2.2rem
+   breiter als seine Kachel und brach mitten im Wort um. */
+.fin-zahl{font-size:clamp(1.45rem,7vw,2.2rem);font-weight:800;color:#fff;
+  letter-spacing:-0.04em;line-height:1.05;}
+#rechnerWert{font-size:clamp(1.9rem,9vw,2.8rem);}
+
+/* Raster-Kinder haben von Haus aus min-width:auto und koennen deshalb nicht
+   schmaler werden als ihr laengster Inhalt - eine E-Mail-Adresse oder eine
+   grosse Zahl schiebt die ganze Spalte dann ueber den Bildschirmrand.
+   Betrifft vor allem kleine Geraete ab 320px. */
+.kontakt-info-cards>*,.kontakt-grid>*,.fin-grid>*,.fin-zahlen>*,
+.rgrid-3>*,.car-grid>*,.team-grid>*,.schritte-grid>*,.direkt-knoepfe>*{min-width:0;}
+body{overflow-wrap:break-word;hyphens:auto;}
+/* Ueberschriften nicht trennen - dort stoert der Bindestrich mehr als er hilft. */
+h1,h2,h3,h4,.section-title,.hero-title,.fin-zahl,.car-card-title,
+#navbar,#navbar *,#mobileMenu,#mobileMenu *,button,.btn-blue,.btn-outline,
+.direkt-btn,.hero-btn-primary,.nav-cta,.footer-link,.breadcrumb,.breadcrumb *{hyphens:manual;}
+/* Titel und "Alle ansehen" standen auf dem Handy nebeneinander - der Link
+   wurde auf zwei Zeilen gequetscht und die Ueberschrift mit ihm. */
+@media(max-width:600px){
+  .section-header-row{flex-direction:column;align-items:flex-start;gap:6px;}
+}
+.info-karte{padding:36px;}
+@media(max-width:768px){
+  .leer-hinweis{padding:40px 20px;}
+  .info-karte{padding:22px;}
+}
+
+@media(max-width:900px){
+  .rgrid-3{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:768px){
+  .fin-grid{grid-template-columns:1fr;gap:28px;}
+  .rgrid-3{grid-template-columns:1fr;}
+}
+
 
 /* Direktkontakt statt Formular: WhatsApp oder das eigene Mailprogramm.
    Kein Server, kein Fremddienst - damit kann keine Anfrage mehr verloren gehen. */
@@ -1856,7 +1901,7 @@ function renderFahrzeugeGrid(cars){
   grid.style.opacity='0';
   setTimeout(()=>{
     if(!cars.length){
-      grid.innerHTML=`<div style="grid-column:1/-1;text-align:center;padding:60px;color:var(--grey-1);">Keine Fahrzeuge gefunden. <span style="color:var(--blue);cursor:pointer;" onclick="resetFilter()">Filter zurücksetzen</span></div>`;
+      grid.innerHTML=`<div class="leer-hinweis" style="grid-column:1/-1;text-align:center;color:var(--grey-1);">Keine Fahrzeuge gefunden. <span style="color:var(--blue);cursor:pointer;" onclick="resetFilter()">Filter zurücksetzen</span></div>`;
     } else {
       grid.innerHTML=cars.map(c=>carCardHTML(c,`openDetail(${c.id})`)).join('');
     }
