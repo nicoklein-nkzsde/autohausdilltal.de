@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-11-08T09:39:01+00:00",
+  "syncedAt": "2026-11-09T00:37:26+00:00",
   "source": "live",
   "count": 25,
   "cars": [
@@ -401,7 +401,7 @@
       "kw": 206,
       "fuel": "Benzin",
       "gear": "",
-      "price": 19580,
+      "price": 19200,
       "condition": "Gebraucht",
       "unfallfrei": "Ja",
       "hubraum": "",
@@ -552,7 +552,7 @@
       "make": "Volkswagen",
       "model": "Sharan",
       "name": "Volkswagen Sharan",
-      "variant": "Comfortline",
+      "variant": "2.0 TDI 7-Sitzer AHK ACC Bremsen NEU",
       "type": "VAN",
       "year": 2016,
       "ez": "11/2016",
@@ -561,7 +561,7 @@
       "kw": 110,
       "fuel": "Diesel",
       "gear": "",
-      "price": 13795,
+      "price": 13495,
       "condition": "Gebraucht",
       "unfallfrei": "Ja",
       "hubraum": "",
