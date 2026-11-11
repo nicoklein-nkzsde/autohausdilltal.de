@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-11-09T00:37:26+00:00",
+  "syncedAt": "2026-11-11T10:24:30+00:00",
   "source": "live",
   "count": 25,
   "cars": [
@@ -190,7 +190,7 @@
       "aussenfarbe": "",
       "innenfarbe": "",
       "polsterung": "",
-      "imageUrl": "https://img.classistatic.de/api/v1/mo-prod/images/02/021658e2-13c9-4cae-bdce-2efec909e11d?rule=mo-1600",
+      "imageUrl": "https://img.classistatic.de/api/v1/mo-prod/images/5b/5b5ceae1-0aee-459e-b505-892a9c1d37a6?rule=mo-1600",
       "link": "https://suchen.mobile.de/fahrzeuge/details.html?id=48424014094752",
       "guarantee": false,
       "adId": "48424014094752"
@@ -549,38 +549,6 @@
     },
     {
       "id": 18,
-      "make": "Volkswagen",
-      "model": "Sharan",
-      "name": "Volkswagen Sharan",
-      "variant": "2.0 TDI 7-Sitzer AHK ACC Bremsen NEU",
-      "type": "VAN",
-      "year": 2016,
-      "ez": "11/2016",
-      "km": 188000,
-      "ps": 150,
-      "kw": 110,
-      "fuel": "Diesel",
-      "gear": "",
-      "price": 13495,
-      "condition": "Gebraucht",
-      "unfallfrei": "Ja",
-      "hubraum": "",
-      "schadstoff": "",
-      "scheckheft": "",
-      "nichtraucher": "",
-      "vorbesitzer": 0,
-      "tueren": "",
-      "sitzplaetze": 0,
-      "aussenfarbe": "",
-      "innenfarbe": "",
-      "polsterung": "",
-      "imageUrl": "https://img.classistatic.de/api/v1/mo-prod/images/ed/ed5944f4-cb80-4f40-8b9f-e7c2b4bd68d2?rule=mo-1600",
-      "link": "https://suchen.mobile.de/fahrzeuge/details.html?id=54975077317632",
-      "guarantee": false,
-      "adId": "54975077317632"
-    },
-    {
-      "id": 19,
       "make": "Opel",
       "model": "Astra",
       "name": "Opel Astra",
@@ -612,7 +580,7 @@
       "adId": "40643609060096"
     },
     {
-      "id": 20,
+      "id": 19,
       "make": "BMW",
       "model": "Touring 540",
       "name": "BMW Touring 540",
@@ -644,7 +612,7 @@
       "adId": "45900165211488"
     },
     {
-      "id": 21,
+      "id": 20,
       "make": "Volvo",
       "model": "C30",
       "name": "Volvo C30",
@@ -676,7 +644,7 @@
       "adId": "446689827"
     },
     {
-      "id": 22,
+      "id": 21,
       "make": "Audi",
       "model": "A5 Sportback",
       "name": "Audi A5 Sportback",
@@ -708,7 +676,7 @@
       "adId": "54406804985984"
     },
     {
-      "id": 23,
+      "id": 22,
       "make": "Renault",
       "model": "Kangoo Rapid",
       "name": "Renault Kangoo Rapid",
@@ -738,6 +706,38 @@
       "link": "https://suchen.mobile.de/fahrzeuge/details.html?id=45916734975136",
       "guarantee": false,
       "adId": "45916734975136"
+    },
+    {
+      "id": 23,
+      "make": "Opel",
+      "model": "Mokka",
+      "name": "Opel Mokka",
+      "variant": "Business-Packet* *Lenkradheizung",
+      "type": "SUV",
+      "year": 2023,
+      "ez": "05/2023",
+      "km": 25000,
+      "ps": 131,
+      "kw": 96,
+      "fuel": "Benzin",
+      "gear": "",
+      "price": 18600,
+      "condition": "Gebraucht",
+      "unfallfrei": "Ja",
+      "hubraum": "",
+      "schadstoff": "",
+      "scheckheft": "",
+      "nichtraucher": "",
+      "vorbesitzer": 0,
+      "tueren": "",
+      "sitzplaetze": 0,
+      "aussenfarbe": "",
+      "innenfarbe": "",
+      "polsterung": "",
+      "imageUrl": "https://img.classistatic.de/api/v1/mo-prod/images/cd/cd5bb652-1b9c-42da-b077-0fc9a28a5168?rule=mo-1600",
+      "link": "https://suchen.mobile.de/fahrzeuge/details.html?id=55305453994752",
+      "guarantee": false,
+      "adId": "55305453994752"
     },
     {
       "id": 24,
