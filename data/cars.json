@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-11-14T01:26:17+00:00",
+  "syncedAt": "2026-11-14T21:25:17+00:00",
   "source": "live",
   "count": 20,
   "cars": [
@@ -273,7 +273,7 @@
       "kw": 100,
       "fuel": "Benzin",
       "gear": "",
-      "price": 11995,
+      "price": 11490,
       "condition": "Gebraucht",
       "unfallfrei": "Ja",
       "hubraum": "",
@@ -433,7 +433,7 @@
       "kw": 125,
       "fuel": "Diesel",
       "gear": "",
-      "price": 11850,
+      "price": 12490,
       "condition": "Gebraucht",
       "unfallfrei": "Ja",
       "hubraum": "",
@@ -497,7 +497,7 @@
       "kw": 250,
       "fuel": "Diesel",
       "gear": "",
-      "price": 25795,
+      "price": 24900,
       "condition": "Gebraucht",
       "unfallfrei": "Ja",
       "hubraum": "",
