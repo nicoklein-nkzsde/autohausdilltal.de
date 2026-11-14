@@ -1,42 +1,10 @@
 {
-  "syncedAt": "2026-11-12T12:51:31+00:00",
+  "syncedAt": "2026-11-14T01:26:17+00:00",
   "source": "live",
-  "count": 25,
+  "count": 20,
   "cars": [
     {
       "id": 1,
-      "make": "Volkswagen",
-      "model": "Tiguan",
-      "name": "Volkswagen Tiguan",
-      "variant": "Lounge *Kamera *4Motion* XENON",
-      "type": "SUV",
-      "year": 2015,
-      "ez": "05/2015",
-      "km": 124000,
-      "ps": 179,
-      "kw": 132,
-      "fuel": "Benzin",
-      "gear": "",
-      "price": 13900,
-      "condition": "Gebraucht",
-      "unfallfrei": "Ja",
-      "hubraum": "",
-      "schadstoff": "",
-      "scheckheft": "",
-      "nichtraucher": "",
-      "vorbesitzer": 0,
-      "tueren": "",
-      "sitzplaetze": 0,
-      "aussenfarbe": "",
-      "innenfarbe": "",
-      "polsterung": "",
-      "imageUrl": "https://img.classistatic.de/api/v1/mo-prod/images/6d/6d2a818f-bb5c-41bf-a540-4118d6a2aaff?rule=mo-1600",
-      "link": "https://suchen.mobile.de/fahrzeuge/details.html?id=48606635125568",
-      "guarantee": false,
-      "adId": "48606635125568"
-    },
-    {
-      "id": 2,
       "make": "Audi",
       "model": "RS5",
       "name": "Audi RS5",
@@ -68,7 +36,7 @@
       "adId": "51751027383200"
     },
     {
-      "id": 3,
+      "id": 2,
       "make": "Mercedes-Benz",
       "model": "E 250",
       "name": "Mercedes-Benz E 250",
@@ -100,7 +68,7 @@
       "adId": "45933036462912"
     },
     {
-      "id": 4,
+      "id": 3,
       "make": "Volkswagen",
       "model": "Caddy",
       "name": "Volkswagen Caddy",
@@ -132,7 +100,7 @@
       "adId": "53172804078624"
     },
     {
-      "id": 5,
+      "id": 4,
       "make": "Volkswagen",
       "model": "Tiguan",
       "name": "Volkswagen Tiguan",
@@ -164,7 +132,7 @@
       "adId": "41149779810464"
     },
     {
-      "id": 6,
+      "id": 5,
       "make": "BMW",
       "model": "118",
       "name": "BMW 118",
@@ -196,7 +164,7 @@
       "adId": "48424014094752"
     },
     {
-      "id": 7,
+      "id": 6,
       "make": "Mercedes-Benz",
       "model": "Coupe C",
       "name": "Mercedes-Benz Coupe C",
@@ -228,39 +196,7 @@
       "adId": "55821547315296"
     },
     {
-      "id": 8,
-      "make": "SEAT",
-      "model": "ST",
-      "name": "SEAT ST",
-      "variant": "Cupra 300 4Drive, Schiebedach*Borbet Felgen",
-      "type": "",
-      "year": 2018,
-      "ez": "02/2018",
-      "km": 56000,
-      "ps": 300,
-      "kw": 221,
-      "fuel": "Benzin",
-      "gear": "",
-      "price": 21795,
-      "condition": "Gebraucht",
-      "unfallfrei": "Ja",
-      "hubraum": "",
-      "schadstoff": "",
-      "scheckheft": "",
-      "nichtraucher": "",
-      "vorbesitzer": 0,
-      "tueren": "",
-      "sitzplaetze": 0,
-      "aussenfarbe": "",
-      "innenfarbe": "",
-      "polsterung": "",
-      "imageUrl": "https://img.classistatic.de/api/v1/mo-prod/images/44/44ad330a-bd94-4a11-a77c-67fdf5814779?rule=mo-1600",
-      "link": "https://suchen.mobile.de/fahrzeuge/details.html?id=54414248751456",
-      "guarantee": false,
-      "adId": "54414248751456"
-    },
-    {
-      "id": 9,
+      "id": 7,
       "make": "Volkswagen",
       "model": "Passat Variant",
       "name": "Volkswagen Passat Variant",
@@ -292,7 +228,7 @@
       "adId": "55676668703968"
     },
     {
-      "id": 10,
+      "id": 8,
       "make": "SEAT",
       "model": "Leon",
       "name": "SEAT Leon",
@@ -324,39 +260,7 @@
       "adId": "48066791015200"
     },
     {
-      "id": 11,
-      "make": "SEAT",
-      "model": "Leon ST",
-      "name": "SEAT Leon ST",
-      "variant": "Xcellence*Kamera*Apple PLAY*Digital Tach",
-      "type": "",
-      "year": 2019,
-      "ez": "08/2019",
-      "km": 97809,
-      "ps": 150,
-      "kw": 110,
-      "fuel": "Benzin",
-      "gear": "",
-      "price": 14195,
-      "condition": "Gebraucht",
-      "unfallfrei": "",
-      "hubraum": "",
-      "schadstoff": "",
-      "scheckheft": "",
-      "nichtraucher": "",
-      "vorbesitzer": 0,
-      "tueren": "",
-      "sitzplaetze": 0,
-      "aussenfarbe": "",
-      "innenfarbe": "",
-      "polsterung": "",
-      "imageUrl": "https://img.classistatic.de/api/v1/mo-prod/images/fc/fc4be17d-6d22-489d-b983-d75a8cfbf0da?rule=mo-1600",
-      "link": "https://suchen.mobile.de/fahrzeuge/details.html?id=43474600739104",
-      "guarantee": false,
-      "adId": "43474600739104"
-    },
-    {
-      "id": 12,
+      "id": 9,
       "make": "MINI",
       "model": "COOPER Countryman",
       "name": "MINI COOPER Countryman",
@@ -388,7 +292,7 @@
       "adId": "50912790822112"
     },
     {
-      "id": 13,
+      "id": 10,
       "make": "BMW",
       "model": "118",
       "name": "BMW 118",
@@ -420,7 +324,7 @@
       "adId": "51451479801536"
     },
     {
-      "id": 14,
+      "id": 11,
       "make": "Ford",
       "model": "Kuga",
       "name": "Ford Kuga",
@@ -452,7 +356,7 @@
       "adId": "438992720"
     },
     {
-      "id": 15,
+      "id": 12,
       "make": "Kia",
       "model": "Sportage",
       "name": "Kia Sportage",
@@ -484,7 +388,7 @@
       "adId": "54781633392032"
     },
     {
-      "id": 16,
+      "id": 13,
       "make": "BMW",
       "model": "530 d",
       "name": "BMW 530 d",
@@ -516,7 +420,7 @@
       "adId": "43471383933152"
     },
     {
-      "id": 17,
+      "id": 14,
       "make": "Opel",
       "model": "Insignia B",
       "name": "Opel Insignia B",
@@ -548,7 +452,7 @@
       "adId": "39554209523104"
     },
     {
-      "id": 18,
+      "id": 15,
       "make": "Opel",
       "model": "Astra",
       "name": "Opel Astra",
@@ -580,7 +484,7 @@
       "adId": "40643609060096"
     },
     {
-      "id": 19,
+      "id": 16,
       "make": "BMW",
       "model": "Touring 540",
       "name": "BMW Touring 540",
@@ -612,39 +516,7 @@
       "adId": "45900165211488"
     },
     {
-      "id": 20,
-      "make": "Volvo",
-      "model": "C30",
-      "name": "Volvo C30",
-      "variant": "1.6 D *TÜV NEU* *Klima",
-      "type": "KLEINWAGEN",
-      "year": 2008,
-      "ez": "12/2008",
-      "km": 110000,
-      "ps": 109,
-      "kw": 80,
-      "fuel": "Diesel",
-      "gear": "",
-      "price": 4490,
-      "condition": "Gebraucht",
-      "unfallfrei": "Ja",
-      "hubraum": "",
-      "schadstoff": "",
-      "scheckheft": "",
-      "nichtraucher": "",
-      "vorbesitzer": 0,
-      "tueren": "",
-      "sitzplaetze": 0,
-      "aussenfarbe": "",
-      "innenfarbe": "",
-      "polsterung": "",
-      "imageUrl": "https://img.classistatic.de/api/v1/mo-prod/images/34/34817f59-89e8-4545-bf68-cb8566ed2ee4?rule=mo-1600",
-      "link": "https://suchen.mobile.de/fahrzeuge/details.html?id=446689827",
-      "guarantee": false,
-      "adId": "446689827"
-    },
-    {
-      "id": 21,
+      "id": 17,
       "make": "Audi",
       "model": "A5 Sportback",
       "name": "Audi A5 Sportback",
@@ -676,7 +548,7 @@
       "adId": "54406804985984"
     },
     {
-      "id": 22,
+      "id": 18,
       "make": "Renault",
       "model": "Kangoo Rapid",
       "name": "Renault Kangoo Rapid",
@@ -689,7 +561,7 @@
       "kw": 70,
       "fuel": "Diesel",
       "gear": "",
-      "price": 8801,
+      "price": 7995,
       "condition": "Gebraucht",
       "unfallfrei": "Ja",
       "hubraum": "",
@@ -708,7 +580,7 @@
       "adId": "45916734975136"
     },
     {
-      "id": 23,
+      "id": 19,
       "make": "Opel",
       "model": "Mokka",
       "name": "Opel Mokka",
@@ -740,39 +612,7 @@
       "adId": "55305453994752"
     },
     {
-      "id": 24,
-      "make": "Mercedes-Benz",
-      "model": "GLE 350",
-      "name": "Mercedes-Benz GLE 350",
-      "variant": "de 4Matic AMG line Night-Paket 320 PS",
-      "type": "SUV",
-      "year": 2022,
-      "ez": "08/2022",
-      "km": 90000,
-      "ps": 320,
-      "kw": 235,
-      "fuel": "Hybrid",
-      "gear": "",
-      "price": 43900,
-      "condition": "Gebraucht",
-      "unfallfrei": "Ja",
-      "hubraum": "",
-      "schadstoff": "",
-      "scheckheft": "",
-      "nichtraucher": "",
-      "vorbesitzer": 0,
-      "tueren": "",
-      "sitzplaetze": 0,
-      "aussenfarbe": "",
-      "innenfarbe": "",
-      "polsterung": "",
-      "imageUrl": "https://img.classistatic.de/api/v1/mo-prod/images/ce/ce4f13a7-cd81-4bb2-a94e-c5615f7f4b39?rule=mo-1600",
-      "link": "https://suchen.mobile.de/fahrzeuge/details.html?id=51372392634752",
-      "guarantee": false,
-      "adId": "51372392634752"
-    },
-    {
-      "id": 25,
+      "id": 20,
       "make": "Opel",
       "model": "Corsa F",
       "name": "Opel Corsa F",
@@ -785,7 +625,7 @@
       "kw": 74,
       "fuel": "Benzin",
       "gear": "",
-      "price": 13200,
+      "price": 14495,
       "condition": "Gebraucht",
       "unfallfrei": "Ja",
       "hubraum": "",
