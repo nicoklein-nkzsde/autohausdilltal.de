@@ -1,7 +1,7 @@
 {
-  "syncedAt": "2026-11-16T05:31:49+00:00",
+  "syncedAt": "2026-11-18T18:04:05+00:00",
   "source": "live",
-  "count": 20,
+  "count": 21,
   "cars": [
     {
       "id": 1,
@@ -133,38 +133,6 @@
     },
     {
       "id": 5,
-      "make": "BMW",
-      "model": "118",
-      "name": "BMW 118",
-      "variant": "1 Limousine 5-trg*SHZ*TÜV-SERVICE NEU",
-      "type": "LIMOUSINE",
-      "year": 2018,
-      "ez": "08/2018",
-      "km": 57200,
-      "ps": 136,
-      "kw": 100,
-      "fuel": "Benzin",
-      "gear": "",
-      "price": 13795,
-      "condition": "Gebraucht",
-      "unfallfrei": "Ja",
-      "hubraum": "",
-      "schadstoff": "",
-      "scheckheft": "",
-      "nichtraucher": "",
-      "vorbesitzer": 0,
-      "tueren": "",
-      "sitzplaetze": 0,
-      "aussenfarbe": "",
-      "innenfarbe": "",
-      "polsterung": "",
-      "imageUrl": "https://img.classistatic.de/api/v1/mo-prod/images/5b/5b5ceae1-0aee-459e-b505-892a9c1d37a6?rule=mo-1600",
-      "link": "https://suchen.mobile.de/fahrzeuge/details.html?id=48424014094752",
-      "guarantee": false,
-      "adId": "48424014094752"
-    },
-    {
-      "id": 6,
       "make": "Mercedes-Benz",
       "model": "Coupe C",
       "name": "Mercedes-Benz Coupe C",
@@ -196,7 +164,7 @@
       "adId": "55821547315296"
     },
     {
-      "id": 7,
+      "id": 6,
       "make": "Volkswagen",
       "model": "Passat Variant",
       "name": "Volkswagen Passat Variant",
@@ -228,7 +196,7 @@
       "adId": "55676668703968"
     },
     {
-      "id": 8,
+      "id": 7,
       "make": "SEAT",
       "model": "Leon",
       "name": "SEAT Leon",
@@ -260,7 +228,7 @@
       "adId": "48066791015200"
     },
     {
-      "id": 9,
+      "id": 8,
       "make": "MINI",
       "model": "COOPER Countryman",
       "name": "MINI COOPER Countryman",
@@ -290,6 +258,38 @@
       "link": "https://suchen.mobile.de/fahrzeuge/details.html?id=50912790822112",
       "guarantee": false,
       "adId": "50912790822112"
+    },
+    {
+      "id": 9,
+      "make": "Volkswagen",
+      "model": "Golf",
+      "name": "Volkswagen Golf",
+      "variant": "VIII.1.5 eTSI LIFE DSG | 150 PS | ACC | LED",
+      "type": "",
+      "year": 2025,
+      "ez": "02/2025",
+      "km": 51606,
+      "ps": 150,
+      "kw": 110,
+      "fuel": "Benzin",
+      "gear": "Automatik",
+      "price": 20995,
+      "condition": "Gebraucht",
+      "unfallfrei": "",
+      "hubraum": "",
+      "schadstoff": "",
+      "scheckheft": "",
+      "nichtraucher": "",
+      "vorbesitzer": 0,
+      "tueren": "",
+      "sitzplaetze": 0,
+      "aussenfarbe": "",
+      "innenfarbe": "",
+      "polsterung": "",
+      "imageUrl": "https://img.classistatic.de/api/v1/mo-prod/images/c1/c161485c-d2d7-46c5-a7c7-d296e3f4f17c?rule=mo-1600",
+      "link": "https://suchen.mobile.de/fahrzeuge/details.html?id=56706102806560",
+      "guarantee": false,
+      "adId": "56706102806560"
     },
     {
       "id": 10,
@@ -357,6 +357,38 @@
     },
     {
       "id": 12,
+      "make": "Opel",
+      "model": "Corsa E",
+      "name": "Opel Corsa E",
+      "variant": "Edition, Sitz - Lenkradheizung, 4-TÜRIG",
+      "type": "KLEINWAGEN",
+      "year": 2018,
+      "ez": "04/2018",
+      "km": 74900,
+      "ps": 90,
+      "kw": 66,
+      "fuel": "Benzin",
+      "gear": "",
+      "price": 8490,
+      "condition": "Gebraucht",
+      "unfallfrei": "",
+      "hubraum": "",
+      "schadstoff": "",
+      "scheckheft": "",
+      "nichtraucher": "",
+      "vorbesitzer": 0,
+      "tueren": "",
+      "sitzplaetze": 0,
+      "aussenfarbe": "",
+      "innenfarbe": "",
+      "polsterung": "",
+      "imageUrl": "https://img.classistatic.de/api/v1/mo-prod/images/27/2762730f-7c3b-434b-8502-ae3faec6661d?rule=mo-1600",
+      "link": "https://suchen.mobile.de/fahrzeuge/details.html?id=56708706919968",
+      "guarantee": false,
+      "adId": "56708706919968"
+    },
+    {
+      "id": 13,
       "make": "Kia",
       "model": "Sportage",
       "name": "Kia Sportage",
@@ -388,7 +420,7 @@
       "adId": "54781633392032"
     },
     {
-      "id": 13,
+      "id": 14,
       "make": "BMW",
       "model": "530 d",
       "name": "BMW 530 d",
@@ -420,7 +452,7 @@
       "adId": "43471383933152"
     },
     {
-      "id": 14,
+      "id": 15,
       "make": "Opel",
       "model": "Insignia B",
       "name": "Opel Insignia B",
@@ -452,7 +484,7 @@
       "adId": "39554209523104"
     },
     {
-      "id": 15,
+      "id": 16,
       "make": "Opel",
       "model": "Astra",
       "name": "Opel Astra",
@@ -484,7 +516,7 @@
       "adId": "40643609060096"
     },
     {
-      "id": 16,
+      "id": 17,
       "make": "BMW",
       "model": "Touring 540",
       "name": "BMW Touring 540",
@@ -516,7 +548,7 @@
       "adId": "45900165211488"
     },
     {
-      "id": 17,
+      "id": 18,
       "make": "Audi",
       "model": "A5 Sportback",
       "name": "Audi A5 Sportback",
@@ -548,7 +580,7 @@
       "adId": "54406804985984"
     },
     {
-      "id": 18,
+      "id": 19,
       "make": "Renault",
       "model": "Kangoo Rapid",
       "name": "Renault Kangoo Rapid",
@@ -580,7 +612,7 @@
       "adId": "45916734975136"
     },
     {
-      "id": 19,
+      "id": 20,
       "make": "Opel",
       "model": "Mokka",
       "name": "Opel Mokka",
@@ -612,7 +644,7 @@
       "adId": "55305453994752"
     },
     {
-      "id": 20,
+      "id": 21,
       "make": "Opel",
       "model": "Corsa F",
       "name": "Opel Corsa F",
