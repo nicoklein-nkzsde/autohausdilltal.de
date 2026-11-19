@@ -1,7 +1,7 @@
 {
-  "syncedAt": "2026-11-18T18:04:05+00:00",
+  "syncedAt": "2026-11-19T19:16:54+00:00",
   "source": "live",
-  "count": 21,
+  "count": 22,
   "cars": [
     {
       "id": 1,
@@ -37,6 +37,70 @@
     },
     {
       "id": 2,
+      "make": "Volkswagen",
+      "model": "Tiguan",
+      "name": "Volkswagen Tiguan",
+      "variant": "Lounge *Kamera *4Motion* XENON",
+      "type": "SUV",
+      "year": 2015,
+      "ez": "05/2015",
+      "km": 124000,
+      "ps": 179,
+      "kw": 132,
+      "fuel": "Benzin",
+      "gear": "",
+      "price": 12995,
+      "condition": "Gebraucht",
+      "unfallfrei": "Ja",
+      "hubraum": "",
+      "schadstoff": "",
+      "scheckheft": "",
+      "nichtraucher": "",
+      "vorbesitzer": 0,
+      "tueren": "",
+      "sitzplaetze": 0,
+      "aussenfarbe": "",
+      "innenfarbe": "",
+      "polsterung": "",
+      "imageUrl": "https://img.classistatic.de/api/v1/mo-prod/images/6d/6d2a818f-bb5c-41bf-a540-4118d6a2aaff?rule=mo-1600",
+      "link": "https://suchen.mobile.de/fahrzeuge/details.html?id=57104036686848",
+      "guarantee": false,
+      "adId": "57104036686848"
+    },
+    {
+      "id": 3,
+      "make": "BMW",
+      "model": "Limousine",
+      "name": "BMW Limousine",
+      "variant": "5-trg. 116 i M Sport Wie NEU, Tadellos",
+      "type": "LIMOUSINE",
+      "year": 2015,
+      "ez": "10/2015",
+      "km": 120000,
+      "ps": 109,
+      "kw": 80,
+      "fuel": "Benzin",
+      "gear": "",
+      "price": 10490,
+      "condition": "Gebraucht",
+      "unfallfrei": "Ja",
+      "hubraum": "",
+      "schadstoff": "",
+      "scheckheft": "",
+      "nichtraucher": "",
+      "vorbesitzer": 0,
+      "tueren": "",
+      "sitzplaetze": 0,
+      "aussenfarbe": "",
+      "innenfarbe": "",
+      "polsterung": "",
+      "imageUrl": "https://img.classistatic.de/api/v1/mo-prod/images/d5/d54e7c60-fa0e-4d36-9c21-7b63e27f40f4?rule=mo-1600",
+      "link": "https://suchen.mobile.de/fahrzeuge/details.html?id=56964341833536",
+      "guarantee": false,
+      "adId": "56964341833536"
+    },
+    {
+      "id": 4,
       "make": "Mercedes-Benz",
       "model": "E 250",
       "name": "Mercedes-Benz E 250",
@@ -68,7 +132,7 @@
       "adId": "45933036462912"
     },
     {
-      "id": 3,
+      "id": 5,
       "make": "Volkswagen",
       "model": "Caddy",
       "name": "Volkswagen Caddy",
@@ -100,7 +164,7 @@
       "adId": "53172804078624"
     },
     {
-      "id": 4,
+      "id": 6,
       "make": "Volkswagen",
       "model": "Tiguan",
       "name": "Volkswagen Tiguan",
@@ -132,7 +196,7 @@
       "adId": "41149779810464"
     },
     {
-      "id": 5,
+      "id": 7,
       "make": "Mercedes-Benz",
       "model": "Coupe C",
       "name": "Mercedes-Benz Coupe C",
@@ -164,7 +228,7 @@
       "adId": "55821547315296"
     },
     {
-      "id": 6,
+      "id": 8,
       "make": "Volkswagen",
       "model": "Passat Variant",
       "name": "Volkswagen Passat Variant",
@@ -196,7 +260,7 @@
       "adId": "55676668703968"
     },
     {
-      "id": 7,
+      "id": 9,
       "make": "SEAT",
       "model": "Leon",
       "name": "SEAT Leon",
@@ -228,7 +292,7 @@
       "adId": "48066791015200"
     },
     {
-      "id": 8,
+      "id": 10,
       "make": "MINI",
       "model": "COOPER Countryman",
       "name": "MINI COOPER Countryman",
@@ -260,7 +324,7 @@
       "adId": "50912790822112"
     },
     {
-      "id": 9,
+      "id": 11,
       "make": "Volkswagen",
       "model": "Golf",
       "name": "Volkswagen Golf",
@@ -292,7 +356,7 @@
       "adId": "56706102806560"
     },
     {
-      "id": 10,
+      "id": 12,
       "make": "BMW",
       "model": "118",
       "name": "BMW 118",
@@ -324,7 +388,7 @@
       "adId": "51451479801536"
     },
     {
-      "id": 11,
+      "id": 13,
       "make": "Ford",
       "model": "Kuga",
       "name": "Ford Kuga",
@@ -356,7 +420,7 @@
       "adId": "438992720"
     },
     {
-      "id": 12,
+      "id": 14,
       "make": "Opel",
       "model": "Corsa E",
       "name": "Opel Corsa E",
@@ -388,7 +452,7 @@
       "adId": "56708706919968"
     },
     {
-      "id": 13,
+      "id": 15,
       "make": "Kia",
       "model": "Sportage",
       "name": "Kia Sportage",
@@ -420,7 +484,7 @@
       "adId": "54781633392032"
     },
     {
-      "id": 14,
+      "id": 16,
       "make": "BMW",
       "model": "530 d",
       "name": "BMW 530 d",
@@ -452,7 +516,7 @@
       "adId": "43471383933152"
     },
     {
-      "id": 15,
+      "id": 17,
       "make": "Opel",
       "model": "Insignia B",
       "name": "Opel Insignia B",
@@ -484,7 +548,7 @@
       "adId": "39554209523104"
     },
     {
-      "id": 16,
+      "id": 18,
       "make": "Opel",
       "model": "Astra",
       "name": "Opel Astra",
@@ -516,7 +580,7 @@
       "adId": "40643609060096"
     },
     {
-      "id": 17,
+      "id": 19,
       "make": "BMW",
       "model": "Touring 540",
       "name": "BMW Touring 540",
@@ -548,39 +612,7 @@
       "adId": "45900165211488"
     },
     {
-      "id": 18,
-      "make": "Audi",
-      "model": "A5 Sportback",
-      "name": "Audi A5 Sportback",
-      "variant": "quattro sport B&O Massage 3x S-line",
-      "type": "",
-      "year": 2018,
-      "ez": "08/2018",
-      "km": 191300,
-      "ps": 218,
-      "kw": 160,
-      "fuel": "Diesel",
-      "gear": "",
-      "price": 18900,
-      "condition": "Gebraucht",
-      "unfallfrei": "Ja",
-      "hubraum": "",
-      "schadstoff": "",
-      "scheckheft": "",
-      "nichtraucher": "",
-      "vorbesitzer": 0,
-      "tueren": "",
-      "sitzplaetze": 0,
-      "aussenfarbe": "",
-      "innenfarbe": "",
-      "polsterung": "",
-      "imageUrl": "https://img.classistatic.de/api/v1/mo-prod/images/50/50e61659-cd70-4a6b-83a4-5c0d39778608?rule=mo-1600",
-      "link": "https://suchen.mobile.de/fahrzeuge/details.html?id=54406804985984",
-      "guarantee": false,
-      "adId": "54406804985984"
-    },
-    {
-      "id": 19,
+      "id": 20,
       "make": "Renault",
       "model": "Kangoo Rapid",
       "name": "Renault Kangoo Rapid",
@@ -612,7 +644,7 @@
       "adId": "45916734975136"
     },
     {
-      "id": 20,
+      "id": 21,
       "make": "Opel",
       "model": "Mokka",
       "name": "Opel Mokka",
@@ -644,7 +676,7 @@
       "adId": "55305453994752"
     },
     {
-      "id": 21,
+      "id": 22,
       "make": "Opel",
       "model": "Corsa F",
       "name": "Opel Corsa F",
