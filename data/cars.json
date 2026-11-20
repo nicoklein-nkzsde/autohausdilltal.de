@@ -1,7 +1,7 @@
 {
-  "syncedAt": "2026-11-19T19:16:54+00:00",
+  "syncedAt": "2026-11-20T15:34:44+00:00",
   "source": "live",
-  "count": 22,
+  "count": 23,
   "cars": [
     {
       "id": 1,
@@ -706,6 +706,38 @@
       "link": "https://suchen.mobile.de/fahrzeuge/details.html?id=442030080",
       "guarantee": false,
       "adId": "442030080"
+    },
+    {
+      "id": 23,
+      "make": "Suzuki",
+      "model": "Jimny",
+      "name": "Suzuki Jimny",
+      "variant": "Klima* *Allrad* *AHK",
+      "type": "",
+      "year": 2001,
+      "ez": "12/2001",
+      "km": 156400,
+      "ps": 82,
+      "kw": 60,
+      "fuel": "Benzin",
+      "gear": "",
+      "price": 2990,
+      "condition": "Gebraucht",
+      "unfallfrei": "",
+      "hubraum": "",
+      "schadstoff": "",
+      "scheckheft": "",
+      "nichtraucher": "",
+      "vorbesitzer": 0,
+      "tueren": "",
+      "sitzplaetze": 0,
+      "aussenfarbe": "",
+      "innenfarbe": "",
+      "polsterung": "",
+      "imageUrl": "https://img.classistatic.de/api/v1/mo-prod/images/4d/4d16d36d-dd8e-41a3-add1-116e10391441?rule=mo-1600",
+      "link": "https://suchen.mobile.de/fahrzeuge/details.html?id=57253385516864",
+      "guarantee": false,
+      "adId": "57253385516864"
     }
   ]
 }
