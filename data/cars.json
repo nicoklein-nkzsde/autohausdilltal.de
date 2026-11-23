@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-11-20T15:34:44+00:00",
+  "syncedAt": "2026-11-23T21:12:23+00:00",
   "source": "live",
   "count": 23,
   "cars": [
@@ -31,9 +31,9 @@
       "innenfarbe": "",
       "polsterung": "",
       "imageUrl": "https://img.classistatic.de/api/v1/mo-prod/images/9f/9fa3e710-1d5a-4799-9b2c-6a3ec5942670?rule=mo-1600",
-      "link": "https://suchen.mobile.de/fahrzeuge/details.html?id=51751027383200",
+      "link": "https://home.mobile.de/TDAUTOMOBILE",
       "guarantee": false,
-      "adId": "51751027383200"
+      "adId": ""
     },
     {
       "id": 2,
@@ -63,9 +63,9 @@
       "innenfarbe": "",
       "polsterung": "",
       "imageUrl": "https://img.classistatic.de/api/v1/mo-prod/images/6d/6d2a818f-bb5c-41bf-a540-4118d6a2aaff?rule=mo-1600",
-      "link": "https://suchen.mobile.de/fahrzeuge/details.html?id=57104036686848",
+      "link": "https://home.mobile.de/TDAUTOMOBILE",
       "guarantee": false,
-      "adId": "57104036686848"
+      "adId": ""
     },
     {
       "id": 3,
@@ -95,9 +95,9 @@
       "innenfarbe": "",
       "polsterung": "",
       "imageUrl": "https://img.classistatic.de/api/v1/mo-prod/images/d5/d54e7c60-fa0e-4d36-9c21-7b63e27f40f4?rule=mo-1600",
-      "link": "https://suchen.mobile.de/fahrzeuge/details.html?id=56964341833536",
+      "link": "https://home.mobile.de/TDAUTOMOBILE",
       "guarantee": false,
-      "adId": "56964341833536"
+      "adId": ""
     },
     {
       "id": 4,
@@ -127,9 +127,9 @@
       "innenfarbe": "",
       "polsterung": "",
       "imageUrl": "https://img.classistatic.de/api/v1/mo-prod/images/69/697747b3-96d4-4c46-893f-61854ff5cb45?rule=mo-1600",
-      "link": "https://suchen.mobile.de/fahrzeuge/details.html?id=45933036462912",
+      "link": "https://home.mobile.de/TDAUTOMOBILE",
       "guarantee": false,
-      "adId": "45933036462912"
+      "adId": ""
     },
     {
       "id": 5,
@@ -159,9 +159,9 @@
       "innenfarbe": "",
       "polsterung": "",
       "imageUrl": "https://img.classistatic.de/api/v1/mo-prod/images/70/70365814-1a20-4272-8549-93b8df1caf76?rule=mo-1600",
-      "link": "https://suchen.mobile.de/fahrzeuge/details.html?id=53172804078624",
+      "link": "https://home.mobile.de/TDAUTOMOBILE",
       "guarantee": false,
-      "adId": "53172804078624"
+      "adId": ""
     },
     {
       "id": 6,
@@ -191,44 +191,12 @@
       "innenfarbe": "",
       "polsterung": "",
       "imageUrl": "https://img.classistatic.de/api/v1/mo-prod/images/e8/e82e7d95-39a7-4764-a74d-51f50ae31b81?rule=mo-1600",
-      "link": "https://suchen.mobile.de/fahrzeuge/details.html?id=41149779810464",
+      "link": "https://home.mobile.de/TDAUTOMOBILE",
       "guarantee": false,
-      "adId": "41149779810464"
+      "adId": ""
     },
     {
       "id": 7,
-      "make": "Mercedes-Benz",
-      "model": "Coupe C",
-      "name": "Mercedes-Benz Coupe C",
-      "variant": "300 4Matic Kamera, L-E-D, 1.HAND",
-      "type": "SPORTWAGEN",
-      "year": 2021,
-      "ez": "03/2021",
-      "km": 68000,
-      "ps": 258,
-      "kw": 190,
-      "fuel": "Benzin",
-      "gear": "",
-      "price": 29595,
-      "condition": "Gebraucht",
-      "unfallfrei": "Ja",
-      "hubraum": "",
-      "schadstoff": "",
-      "scheckheft": "",
-      "nichtraucher": "",
-      "vorbesitzer": 0,
-      "tueren": "",
-      "sitzplaetze": 0,
-      "aussenfarbe": "",
-      "innenfarbe": "",
-      "polsterung": "",
-      "imageUrl": "https://img.classistatic.de/api/v1/mo-prod/images/ee/eebdab63-f2ad-4403-9746-0c18821fbadf?rule=mo-1600",
-      "link": "https://suchen.mobile.de/fahrzeuge/details.html?id=55821547315296",
-      "guarantee": false,
-      "adId": "55821547315296"
-    },
-    {
-      "id": 8,
       "make": "Volkswagen",
       "model": "Passat Variant",
       "name": "Volkswagen Passat Variant",
@@ -255,12 +223,12 @@
       "innenfarbe": "",
       "polsterung": "",
       "imageUrl": "https://img.classistatic.de/api/v1/mo-prod/images/ed/edd2ea37-0b5c-4b62-9cff-f1a561beb4c3?rule=mo-1600",
-      "link": "https://suchen.mobile.de/fahrzeuge/details.html?id=55676668703968",
+      "link": "https://home.mobile.de/TDAUTOMOBILE",
       "guarantee": false,
-      "adId": "55676668703968"
+      "adId": ""
     },
     {
-      "id": 9,
+      "id": 8,
       "make": "SEAT",
       "model": "Leon",
       "name": "SEAT Leon",
@@ -287,12 +255,12 @@
       "innenfarbe": "",
       "polsterung": "",
       "imageUrl": "https://img.classistatic.de/api/v1/mo-prod/images/d8/d870e212-0525-4d18-a0ad-e8b525df8400?rule=mo-1600",
-      "link": "https://suchen.mobile.de/fahrzeuge/details.html?id=48066791015200",
+      "link": "https://home.mobile.de/TDAUTOMOBILE",
       "guarantee": false,
-      "adId": "48066791015200"
+      "adId": ""
     },
     {
-      "id": 10,
+      "id": 9,
       "make": "MINI",
       "model": "COOPER Countryman",
       "name": "MINI COOPER Countryman",
@@ -319,12 +287,12 @@
       "innenfarbe": "",
       "polsterung": "",
       "imageUrl": "https://img.classistatic.de/api/v1/mo-prod/images/63/6325a65c-400b-4998-8ec1-dbbb7c615010?rule=mo-1600",
-      "link": "https://suchen.mobile.de/fahrzeuge/details.html?id=50912790822112",
+      "link": "https://home.mobile.de/TDAUTOMOBILE",
       "guarantee": false,
-      "adId": "50912790822112"
+      "adId": ""
     },
     {
-      "id": 11,
+      "id": 10,
       "make": "Volkswagen",
       "model": "Golf",
       "name": "Volkswagen Golf",
@@ -351,12 +319,12 @@
       "innenfarbe": "",
       "polsterung": "",
       "imageUrl": "https://img.classistatic.de/api/v1/mo-prod/images/c1/c161485c-d2d7-46c5-a7c7-d296e3f4f17c?rule=mo-1600",
-      "link": "https://suchen.mobile.de/fahrzeuge/details.html?id=56706102806560",
+      "link": "https://home.mobile.de/TDAUTOMOBILE",
       "guarantee": false,
-      "adId": "56706102806560"
+      "adId": ""
     },
     {
-      "id": 12,
+      "id": 11,
       "make": "BMW",
       "model": "118",
       "name": "BMW 118",
@@ -383,12 +351,12 @@
       "innenfarbe": "",
       "polsterung": "",
       "imageUrl": "https://img.classistatic.de/api/v1/mo-prod/images/f9/f966ad7c-9f31-4f01-878f-f5f38357f1f8?rule=mo-1600",
-      "link": "https://suchen.mobile.de/fahrzeuge/details.html?id=51451479801536",
+      "link": "https://home.mobile.de/TDAUTOMOBILE",
       "guarantee": false,
-      "adId": "51451479801536"
+      "adId": ""
     },
     {
-      "id": 13,
+      "id": 12,
       "make": "Ford",
       "model": "Kuga",
       "name": "Ford Kuga",
@@ -415,12 +383,12 @@
       "innenfarbe": "",
       "polsterung": "",
       "imageUrl": "https://img.classistatic.de/api/v1/mo-prod/images/f7/f7010344-496c-4ffb-b510-0570d1d001ae?rule=mo-1600",
-      "link": "https://suchen.mobile.de/fahrzeuge/details.html?id=438992720",
+      "link": "https://home.mobile.de/TDAUTOMOBILE",
       "guarantee": false,
-      "adId": "438992720"
+      "adId": ""
     },
     {
-      "id": 14,
+      "id": 13,
       "make": "Opel",
       "model": "Corsa E",
       "name": "Opel Corsa E",
@@ -447,12 +415,12 @@
       "innenfarbe": "",
       "polsterung": "",
       "imageUrl": "https://img.classistatic.de/api/v1/mo-prod/images/27/2762730f-7c3b-434b-8502-ae3faec6661d?rule=mo-1600",
-      "link": "https://suchen.mobile.de/fahrzeuge/details.html?id=56708706919968",
+      "link": "https://home.mobile.de/TDAUTOMOBILE",
       "guarantee": false,
-      "adId": "56708706919968"
+      "adId": ""
     },
     {
-      "id": 15,
+      "id": 14,
       "make": "Kia",
       "model": "Sportage",
       "name": "Kia Sportage",
@@ -479,12 +447,12 @@
       "innenfarbe": "",
       "polsterung": "",
       "imageUrl": "https://img.classistatic.de/api/v1/mo-prod/images/da/da460b6a-9a0c-454f-ad0c-c7353acc01dc?rule=mo-1600",
-      "link": "https://suchen.mobile.de/fahrzeuge/details.html?id=54781633392032",
+      "link": "https://home.mobile.de/TDAUTOMOBILE",
       "guarantee": false,
-      "adId": "54781633392032"
+      "adId": ""
     },
     {
-      "id": 16,
+      "id": 15,
       "make": "BMW",
       "model": "530 d",
       "name": "BMW 530 d",
@@ -511,12 +479,12 @@
       "innenfarbe": "",
       "polsterung": "",
       "imageUrl": "https://img.classistatic.de/api/v1/mo-prod/images/51/51ab5c47-6d41-4d5f-acaf-1feebded853f?rule=mo-1600",
-      "link": "https://suchen.mobile.de/fahrzeuge/details.html?id=43471383933152",
+      "link": "https://home.mobile.de/TDAUTOMOBILE",
       "guarantee": false,
-      "adId": "43471383933152"
+      "adId": ""
     },
     {
-      "id": 17,
+      "id": 16,
       "make": "Opel",
       "model": "Insignia B",
       "name": "Opel Insignia B",
@@ -543,12 +511,12 @@
       "innenfarbe": "",
       "polsterung": "",
       "imageUrl": "https://img.classistatic.de/api/v1/mo-prod/images/24/24610f1e-6df5-4d25-a6ff-10bc1efc5738?rule=mo-1600",
-      "link": "https://suchen.mobile.de/fahrzeuge/details.html?id=39554209523104",
+      "link": "https://home.mobile.de/TDAUTOMOBILE",
       "guarantee": false,
-      "adId": "39554209523104"
+      "adId": ""
     },
     {
-      "id": 18,
+      "id": 17,
       "make": "Opel",
       "model": "Astra",
       "name": "Opel Astra",
@@ -575,12 +543,12 @@
       "innenfarbe": "",
       "polsterung": "",
       "imageUrl": "https://img.classistatic.de/api/v1/mo-prod/images/a2/a23e2aab-3e7a-41a9-9276-5fdca934539c?rule=mo-1600",
-      "link": "https://suchen.mobile.de/fahrzeuge/details.html?id=40643609060096",
+      "link": "https://home.mobile.de/TDAUTOMOBILE",
       "guarantee": false,
-      "adId": "40643609060096"
+      "adId": ""
     },
     {
-      "id": 19,
+      "id": 18,
       "make": "BMW",
       "model": "Touring 540",
       "name": "BMW Touring 540",
@@ -607,12 +575,12 @@
       "innenfarbe": "",
       "polsterung": "",
       "imageUrl": "https://img.classistatic.de/api/v1/mo-prod/images/dd/dd189f38-3108-44e2-bf11-ec4e6e01cde6?rule=mo-1600",
-      "link": "https://suchen.mobile.de/fahrzeuge/details.html?id=45900165211488",
+      "link": "https://home.mobile.de/TDAUTOMOBILE",
       "guarantee": false,
-      "adId": "45900165211488"
+      "adId": ""
     },
     {
-      "id": 20,
+      "id": 19,
       "make": "Renault",
       "model": "Kangoo Rapid",
       "name": "Renault Kangoo Rapid",
@@ -639,12 +607,12 @@
       "innenfarbe": "",
       "polsterung": "",
       "imageUrl": "https://img.classistatic.de/api/v1/mo-prod/images/a1/a1227688-ae59-4c89-80f5-49db86c339cf?rule=mo-1600",
-      "link": "https://suchen.mobile.de/fahrzeuge/details.html?id=45916734975136",
+      "link": "https://home.mobile.de/TDAUTOMOBILE",
       "guarantee": false,
-      "adId": "45916734975136"
+      "adId": ""
     },
     {
-      "id": 21,
+      "id": 20,
       "make": "Opel",
       "model": "Mokka",
       "name": "Opel Mokka",
@@ -671,9 +639,41 @@
       "innenfarbe": "",
       "polsterung": "",
       "imageUrl": "https://img.classistatic.de/api/v1/mo-prod/images/cd/cd5bb652-1b9c-42da-b077-0fc9a28a5168?rule=mo-1600",
-      "link": "https://suchen.mobile.de/fahrzeuge/details.html?id=55305453994752",
+      "link": "https://suchen.mobile.de/fahrzeuge/details.html?id=51751027383200",
       "guarantee": false,
-      "adId": "55305453994752"
+      "adId": "51751027383200"
+    },
+    {
+      "id": 21,
+      "make": "Fiat",
+      "model": "500e 500",
+      "name": "Fiat 500e 500",
+      "variant": "e Icon, Inspektion Neu, Garantie",
+      "type": "",
+      "year": 2022,
+      "ez": "06/2022",
+      "km": 56000,
+      "ps": 118,
+      "kw": 87,
+      "fuel": "Elektro",
+      "gear": "",
+      "price": 15900,
+      "condition": "Gebraucht",
+      "unfallfrei": "Ja",
+      "hubraum": "",
+      "schadstoff": "",
+      "scheckheft": "",
+      "nichtraucher": "",
+      "vorbesitzer": 0,
+      "tueren": "",
+      "sitzplaetze": 0,
+      "aussenfarbe": "",
+      "innenfarbe": "",
+      "polsterung": "",
+      "imageUrl": "https://img.classistatic.de/api/v1/mo-prod/images/a9/a9f97937-8d49-4b76-bc22-243b135cd799?rule=mo-1600",
+      "link": "https://home.mobile.de/TDAUTOMOBILE",
+      "guarantee": false,
+      "adId": ""
     },
     {
       "id": 22,
@@ -703,9 +703,9 @@
       "innenfarbe": "",
       "polsterung": "",
       "imageUrl": "https://img.classistatic.de/api/v1/mo-prod/images/df/dfd09f61-7aa4-4441-8e96-517161142507?rule=mo-1600",
-      "link": "https://suchen.mobile.de/fahrzeuge/details.html?id=442030080",
+      "link": "https://home.mobile.de/TDAUTOMOBILE",
       "guarantee": false,
-      "adId": "442030080"
+      "adId": ""
     },
     {
       "id": 23,
@@ -735,9 +735,9 @@
       "innenfarbe": "",
       "polsterung": "",
       "imageUrl": "https://img.classistatic.de/api/v1/mo-prod/images/4d/4d16d36d-dd8e-41a3-add1-116e10391441?rule=mo-1600",
-      "link": "https://suchen.mobile.de/fahrzeuge/details.html?id=57253385516864",
+      "link": "https://suchen.mobile.de/fahrzeuge/details.html?id=57822875161696",
       "guarantee": false,
-      "adId": "57253385516864"
+      "adId": "57822875161696"
     }
   ]
 }
